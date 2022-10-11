@@ -56,7 +56,7 @@ namespace MobileAppDashBoard.Models
         public IEnumerable<TbReplyToComment> lstReplyToComments { get; set; }
 
         public IEnumerable<TbLoginHistory> lstLogInHistories { get; set; }
-
+        public IEnumerable<ApplicationUser> lstUsers { get; set; }
         public IEnumerable<VwLevelsAndLawsAndQuestionMCQ> lstLevelsAndLawsAndQuestionMCQ { get; set; }
 
         

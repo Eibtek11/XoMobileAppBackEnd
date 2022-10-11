@@ -1,4 +1,5 @@
 ﻿using BL;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -21,13 +22,13 @@ namespace MobileAppDashBoard.Controllers
             _logger = logger;
             ctx = context;
         }
-
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public IActionResult Index()
         {
             return View();
         }
 
-        [Authorize(Roles = "Admin")]
+       
         public IActionResult IndexCountries()
         {
             HomePageModel model = new HomePageModel();

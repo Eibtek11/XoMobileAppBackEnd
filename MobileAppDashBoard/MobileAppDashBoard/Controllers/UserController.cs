@@ -8,8 +8,12 @@ using System.Threading.Tasks;
 
 using MobileAppDashBoard.Models;
 using BL;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Microsoft.Extensions.Configuration;
 
-namespace VipAssistProject.Controllers
+namespace MobileAppDashBoard.Controllers
 {
     public class UserController : Controller
     {
@@ -17,14 +21,16 @@ namespace VipAssistProject.Controllers
         MobileAppDbContext Ctx;
         UserManager<ApplicationUser> Usermanager;
         SignInManager<ApplicationUser> SignInManager;
-       
-        public UserController(MobileAppDbContext ctx ,UserManager<ApplicationUser> usermanager, SignInManager<ApplicationUser> signInManager)
+        private readonly IConfiguration _configuration;
+        public UserController(IConfiguration configuration,MobileAppDbContext ctx ,UserManager<ApplicationUser> usermanager, SignInManager<ApplicationUser> signInManager)
         {
             Usermanager = usermanager;
             SignInManager = signInManager;
             Ctx = ctx;
-          
-    }
+            _configuration = configuration;
+
+
+        }
         
 
         public IActionResult Index()
@@ -265,5 +271,10 @@ namespace VipAssistProject.Controllers
             }
 
         }
+
+
+
+
+       
     }
 }

@@ -122,3 +122,4 @@ C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netco
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\QuestionUserAnswer\Index.cshtml.g.cs
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ReplyToComments\Form.cshtml.g.cs
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ReplyToComments\Index.cshtml.g.cs
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll

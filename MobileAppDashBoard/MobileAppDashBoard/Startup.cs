@@ -1,5 +1,6 @@
 using BL;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -8,10 +9,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
+using MobileAppDashBoard.Controllers;
 using MobileAppDashBoard.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace MobileAppDashBoard
@@ -41,6 +45,7 @@ namespace MobileAppDashBoard
             services.AddScoped<questionUserAnswerService, ClsQuestionUserAnswer>();
             services.AddScoped<logInHistoryService, ClsLoginHistory>();
             services.AddScoped<replyToCommentService, ClsReplyToComments>();
+            services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddDistributedMemoryCache();
             services.AddSession();
             services.AddHttpContextAccessor();
@@ -53,7 +58,35 @@ namespace MobileAppDashBoard
                 options.User.RequireUniqueEmail = true;
                 options.Password.RequireDigit = false;
 
-            }).AddErrorDescriber<CustomIdentityErrorDescriber>().AddEntityFrameworkStores<MobileAppDbContext>();
+            }).AddErrorDescriber<CustomIdentityErrorDescriber>().AddEntityFrameworkStores<MobileAppDbContext>().AddDefaultTokenProviders();
+
+          //  services.AddAuthentication(option =>
+          //  {
+          //      option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+          //      option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+          //      option.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+          //  })
+          //      .AddCookie("Cookies", options =>
+          //      {
+          //          options.LoginPath = "/login";
+          //          options.ExpireTimeSpan = TimeSpan.FromDays(1);
+          //      })
+          //.AddJwtBearer(option =>
+          //option.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+          //{
+
+          //    ValidateIssuer = true,
+          //    ValidateAudience = true,
+          //    ValidAudience = Configuration["JWT:ValidAudience"],
+          //    ValidIssuer = Configuration["JWT:ValidIssuer"],
+          //    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Secret"]))
+
+          //});
+
+
+
+
+
             services.ConfigureApplicationCookie(options =>
             {
                 options.AccessDeniedPath = "/User/AccessDenied";
@@ -66,6 +99,7 @@ namespace MobileAppDashBoard
 
 
             });
+         
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
