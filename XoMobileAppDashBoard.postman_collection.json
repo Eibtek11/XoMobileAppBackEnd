@@ -123,12 +123,12 @@
 					}
 				},
 				"url": {
-					"raw": "https://localhost:44398/api/UserLoginApi/login",
-					"protocol": "https",
+					"raw": "http://ismguk.com/api/UserLoginApi/login",
+					"protocol": "http",
 					"host": [
-						"localhost"
+						"ismguk",
+						"com"
 					],
-					"port": "44398",
 					"path": [
 						"api",
 						"UserLoginApi",
@@ -153,12 +153,12 @@
 					}
 				},
 				"url": {
-					"raw": "https://localhost:44398/api/UserLoginApi/signup",
-					"protocol": "https",
+					"raw": "http://ismguk.com/api/UserLoginApi/signup",
+					"protocol": "http",
 					"host": [
-						"localhost"
+						"ismguk",
+						"com"
 					],
-					"port": "44398",
 					"path": [
 						"api",
 						"UserLoginApi",
@@ -174,12 +174,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://localhost:44398/api/LawsApi/",
-					"protocol": "https",
+					"raw": "http://ismguk.com/api/LawsApi/",
+					"protocol": "http",
 					"host": [
-						"localhost"
+						"ismguk",
+						"com"
 					],
-					"port": "44398",
 					"path": [
 						"api",
 						"LawsApi",
@@ -195,12 +195,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://localhost:44398/api/ClaimsApi/",
-					"protocol": "https",
+					"raw": "http://ismguk.com/api/ClaimsApi/",
+					"protocol": "http",
 					"host": [
-						"localhost"
+						"ismguk",
+						"com"
 					],
-					"port": "44398",
 					"path": [
 						"api",
 						"ClaimsApi",
@@ -216,12 +216,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://localhost:44398/api/UserApi/",
-					"protocol": "https",
+					"raw": "http://ismguk.com/api/UserApi/",
+					"protocol": "http",
 					"host": [
-						"localhost"
+						"ismguk",
+						"com"
 					],
-					"port": "44398",
 					"path": [
 						"api",
 						"UserApi",

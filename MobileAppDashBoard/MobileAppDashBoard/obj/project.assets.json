@@ -6031,11 +6031,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER\\source\\repos\\MobileAppDashBoard\\MobileAppDashBoard\\MobileAppDashBoard.csproj",
+      "projectUniqueName": "D:\\XoMobileAppBackEnd\\MobileAppDashBoard\\MobileAppDashBoard\\MobileAppDashBoard.csproj",
       "projectName": "MobileAppDashBoard",
-      "projectPath": "C:\\Users\\USER\\source\\repos\\MobileAppDashBoard\\MobileAppDashBoard\\MobileAppDashBoard.csproj",
+      "projectPath": "D:\\XoMobileAppBackEnd\\MobileAppDashBoard\\MobileAppDashBoard\\MobileAppDashBoard.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER\\source\\repos\\MobileAppDashBoard\\MobileAppDashBoard\\obj\\",
+      "outputPath": "D:\\XoMobileAppBackEnd\\MobileAppDashBoard\\MobileAppDashBoard\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -6056,11 +6056,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\USER\\source\\repos\\MobileAppDashBoard\\BL\\BL.csproj": {
-              "projectPath": "C:\\Users\\USER\\source\\repos\\MobileAppDashBoard\\BL\\BL.csproj"
+            "D:\\XoMobileAppBackEnd\\MobileAppDashBoard\\BL\\BL.csproj": {
+              "projectPath": "D:\\XoMobileAppBackEnd\\MobileAppDashBoard\\BL\\BL.csproj"
             },
-            "C:\\Users\\USER\\source\\repos\\MobileAppDashBoard\\Domains\\Domains.csproj": {
-              "projectPath": "C:\\Users\\USER\\source\\repos\\MobileAppDashBoard\\Domains\\Domains.csproj"
+            "D:\\XoMobileAppBackEnd\\MobileAppDashBoard\\Domains\\Domains.csproj": {
+              "projectPath": "D:\\XoMobileAppBackEnd\\MobileAppDashBoard\\Domains\\Domains.csproj"
             }
           }
         }
