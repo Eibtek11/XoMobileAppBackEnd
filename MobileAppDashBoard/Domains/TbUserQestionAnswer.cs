@@ -16,7 +16,7 @@ namespace Domains
         public DateTime? CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public string Notes { get; set; }
-
+        public Guid? QuestionMCQQuestionId { get; set; }
         public virtual TbQuestion Question { get; set; }
         public virtual TbQuestionsMCQ QuestionMCQ { get; set; }
     }

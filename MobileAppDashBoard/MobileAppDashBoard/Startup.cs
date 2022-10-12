@@ -46,6 +46,7 @@ namespace MobileAppDashBoard
             services.AddScoped<logInHistoryService, ClsLoginHistory>();
             services.AddScoped<replyToCommentService, ClsReplyToComments>();
             services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<UserQuestionAnswerService, ClsUserQuestionAnswer>();
             services.AddDistributedMemoryCache();
             services.AddSession();
             services.AddHttpContextAccessor();

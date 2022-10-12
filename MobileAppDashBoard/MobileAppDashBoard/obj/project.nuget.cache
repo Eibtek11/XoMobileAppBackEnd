@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "42lH3ZSYbP/RfG71XSVJQA8DHpvboBNUyw6ZSsCoD7VpKjsHKF/7s4IUMbdocwTGT4vmtsLDRMZ/Y5DrTmoZjA==",
+  "dgSpecHash": "WFZ7VBJ/BCX80ScqxEW1O6tML9aAwMOOTGazJ3RoYceWNpD+pY8dA6znYfFjvCiJwU3zPCV6aWndAkYVBI81Ww==",
   "success": true,
-  "projectFilePath": "D:\\XoMobileAppBackEnd\\MobileAppDashBoard\\MobileAppDashBoard\\MobileAppDashBoard.csproj",
+  "projectFilePath": "C:\\Users\\USER\\source\\repos\\MobileAppDashBoard\\MobileAppDashBoard\\MobileAppDashBoard.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.17\\microsoft.aspnetcore.authentication.jwtbearer.3.1.17.nupkg.sha512",

@@ -123,3 +123,5 @@ C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\net
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\MobileAppDashBoard.pdb
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\MobileAppDashBoard.genruntimeconfig.cache
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\UserQestionAnswers\Form.cshtml.g.cs
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\UserQestionAnswers\Index.cshtml.g.cs

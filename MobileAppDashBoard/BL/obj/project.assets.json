@@ -7427,11 +7427,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\XoMobileAppBackEnd\\MobileAppDashBoard\\BL\\BL.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\source\\repos\\MobileAppDashBoard\\BL\\BL.csproj",
       "projectName": "BL",
-      "projectPath": "D:\\XoMobileAppBackEnd\\MobileAppDashBoard\\BL\\BL.csproj",
+      "projectPath": "C:\\Users\\USER\\source\\repos\\MobileAppDashBoard\\BL\\BL.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "D:\\XoMobileAppBackEnd\\MobileAppDashBoard\\BL\\obj\\",
+      "outputPath": "C:\\Users\\USER\\source\\repos\\MobileAppDashBoard\\BL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -7452,8 +7452,8 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "D:\\XoMobileAppBackEnd\\MobileAppDashBoard\\Domains\\Domains.csproj": {
-              "projectPath": "D:\\XoMobileAppBackEnd\\MobileAppDashBoard\\Domains\\Domains.csproj"
+            "C:\\Users\\USER\\source\\repos\\MobileAppDashBoard\\Domains\\Domains.csproj": {
+              "projectPath": "C:\\Users\\USER\\source\\repos\\MobileAppDashBoard\\Domains\\Domains.csproj"
             }
           }
         }
