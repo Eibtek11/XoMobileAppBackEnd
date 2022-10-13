@@ -12,23 +12,24 @@ using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.Extensions.Configuration;
+using Domains;
 
 namespace MobileAppDashBoard.Controllers
 {
     public class UserController : Controller
     {
-      
+        logInHistoryService lgHistory;
         MobileAppDbContext Ctx;
         UserManager<ApplicationUser> Usermanager;
         SignInManager<ApplicationUser> SignInManager;
         private readonly IConfiguration _configuration;
-        public UserController(IConfiguration configuration,MobileAppDbContext ctx ,UserManager<ApplicationUser> usermanager, SignInManager<ApplicationUser> signInManager)
+        public UserController(logInHistoryService LgHistory,IConfiguration configuration,MobileAppDbContext ctx ,UserManager<ApplicationUser> usermanager, SignInManager<ApplicationUser> signInManager)
         {
             Usermanager = usermanager;
             SignInManager = signInManager;
             Ctx = ctx;
             _configuration = configuration;
-
+            lgHistory = LgHistory;
 
         }
         
@@ -143,9 +144,13 @@ namespace MobileAppDashBoard.Controllers
                 }
                 if (result.Succeeded)
                 {
-
-
-
+                    string id =  Usermanager.Users.Where(a => a.Email == oHomePageModel.Email).FirstOrDefault().Id;
+                    TbLoginHistory item = new TbLoginHistory();
+                    item.Id = id;
+                    item.CreatedDate = DateTime.Now;
+                    item.LogInId = new Guid();
+                    
+                    lgHistory.Add(item);
 
                     result.ToString();
                     return Redirect(oHomePageModel.ReturnUrl);

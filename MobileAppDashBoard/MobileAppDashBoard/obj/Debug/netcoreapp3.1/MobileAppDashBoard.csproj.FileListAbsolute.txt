@@ -125,3 +125,5 @@ C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netco
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\UserQestionAnswers\Form.cshtml.g.cs
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\UserQestionAnswers\Index.cshtml.g.cs
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\LoginHistory\MonthIndex.cshtml.g.cs
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\LoginHistory\YearIndex.cshtml.g.cs

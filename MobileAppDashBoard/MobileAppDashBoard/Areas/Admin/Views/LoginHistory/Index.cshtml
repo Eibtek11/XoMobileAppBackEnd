@@ -2,6 +2,7 @@
     Layout = "";
 }
 @model MobileAppDashBoard.Models.HomePageModel
+@inject Microsoft.AspNetCore.Identity.UserManager<BL.ApplicationUser> USERmANAGER
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="rtl">
 <!-- BEGIN: Head-->
@@ -831,8 +832,8 @@
                     <div class="action-btns d-none">
                         <div class="btn-dropdown mr-1 mb-1">
                             @*<div class="btn-group dropdown actions-dropodown">
-                                <a asp-controller="QuestionUserAnswer" asp-action="Form"><button class="btn btn-primary mr-1 mb-1">اضف الدولة جديدة</button></a>
-                            </div>*@
+                    <a asp-controller="QuestionUserAnswer" asp-action="Form"><button class="btn btn-primary mr-1 mb-1">اضف الدولة جديدة</button></a>
+                </div>*@
                         </div>
                     </div>
                     <!-- dataTable starts -->
@@ -840,10 +841,11 @@
                         <table class="table data-thumb-view">
                             <thead>
                                 <tr>
-                                    
-                                    
+
+                                   
+                                    <th></th>
                                     <th>كود العميل</th>
-                                  
+
                                     <th>تاريخ الدخول</th>
                                     <th>ادوات</th>
                                 </tr>
@@ -854,26 +856,10 @@
 
 
                                 <tr>
-                                    <td>@item.Id</td>
-                                    <td>@item.CreatedDate</td>
-                                    @*<td class="product-img">
-                                        <img src="@string.Format("/Uploads/{0}",item.CountryImageName)" alt="Img placeholder">
-                                    </td>*@
-                                    @*<td class="product-name">@item.CompanyDescription</td>*@
+                                    <td></td>
+                                    <td class="product-category">@USERmANAGER.Users.Where(A => A.Id == item.Id).FirstOrDefault().UserName</td>
+                                    <td class="product-category">@item.CreatedDate</td>
                                    
-                                    @*<td>
-            <div class="progress progress-bar-success">
-                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="40" aria-valuemax="100" style="width:97%"></div>
-            </div>
-        </td>
-        <td>
-            <div class="chip chip-warning">
-                <div class="chip-body">
-                    <div class="chip-text">on hold</div>
-                </div>
-            </div>
-        </td>
-        <td class="product-price">$69.99</td>*@
                                     <td class="product-action">
                                         <a asp-controller="LoginHistory" asp-action="Form" asp-route-id="@item.LogInId"><span><i class="feather icon-edit"></i></span></a>
                                         <a asp-controller="LoginHistory" asp-action="Delete" asp-route-id="@item.LogInId"><span class="action-delete"><i class="feather icon-trash"></i></span></a>
@@ -891,6 +877,8 @@
                             </tbody>
                         </table>
                     </div>
+
+                   
                     <!-- dataTable ends -->
                     <!-- add new sidebar starts -->
                     <!-- add new sidebar ends -->

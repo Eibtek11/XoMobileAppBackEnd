@@ -36,6 +36,7 @@ namespace MobileAppDashBoard.Areas.Admin.Controllers
             model.lstquestionUserAnswer = questionUserAnswerService.getAll();
             model.lstReplyToComments = replyToCommentService.getAll();
             model.lstLogInHistories = logInHistoryService.getAll();
+            ViewBag.VALUE = DateTime.Now;
             return View(model);
 
 
@@ -111,6 +112,37 @@ namespace MobileAppDashBoard.Areas.Admin.Controllers
             TbLoginHistory oUserQestionAnswer = new TbLoginHistory();
             oUserQestionAnswer = ctx.TbLoginHistories.Where(a => a.LogInId == id).FirstOrDefault();
             return View(oUserQestionAnswer);
+        }
+
+        public IActionResult MonthIndex()
+        {
+            HomePageModel model = new HomePageModel();
+            model.lstCountries = countryService.getAll();
+            model.lstquestionUserAnswer = questionUserAnswerService.getAll();
+            model.lstReplyToComments = replyToCommentService.getAll();
+            model.lstLogInHistories = logInHistoryService.getAll();
+            model.lstVwStatMonthUsers = ctx.VwStatMonthUsers.ToList();
+            model.lstVwStatYearUsers = ctx.VwStatYearUsers.ToList();
+            ViewBag.VALUE = DateTime.Now;
+            return View(model);
+
+
+        }
+
+
+        public IActionResult YearIndex()
+        {
+            HomePageModel model = new HomePageModel();
+            model.lstCountries = countryService.getAll();
+            model.lstquestionUserAnswer = questionUserAnswerService.getAll();
+            model.lstReplyToComments = replyToCommentService.getAll();
+            model.lstLogInHistories = logInHistoryService.getAll();
+            model.lstVwStatMonthUsers = ctx.VwStatMonthUsers.ToList();
+            model.lstVwStatYearUsers = ctx.VwStatYearUsers.ToList();
+            ViewBag.VALUE = DateTime.Now;
+            return View(model);
+
+
         }
     }
 }

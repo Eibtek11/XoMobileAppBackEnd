@@ -60,8 +60,9 @@ namespace MobileAppDashBoard.Models
         public IEnumerable<TbLoginHistory> lstLogInHistories { get; set; }
         public IEnumerable<ApplicationUser> lstUsers { get; set; }
         public IEnumerable<VwLevelsAndLawsAndQuestionMCQ> lstLevelsAndLawsAndQuestionMCQ { get; set; }
+        public IEnumerable<VwStatMonthUser> lstVwStatMonthUsers { get; set; }
+        public IEnumerable<VwStatYearUser> lstVwStatYearUsers { get; set; }
 
-        
         #endregion
 
     }

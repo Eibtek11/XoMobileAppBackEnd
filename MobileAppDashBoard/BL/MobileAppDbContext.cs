@@ -37,8 +37,12 @@ namespace BL
         public virtual DbSet<VwTasksAndUsers> VwTasksAndUserss { get; set; }
 
 
+        public virtual DbSet<VwStatYear> VwStatYears { get; set; }
+        public virtual DbSet<VwStatMonth> VwStatMonths { get; set; }
+        public virtual DbSet<VwStatMonthUser> VwStatMonthUsers { get; set; }
+        public virtual DbSet<VwStatYearUser> VwStatYearUsers { get; set; }
         public virtual DbSet<VwLevelsAndLawsAndQuestionMCQ> VwLevelsAndLawsAndQuestionMCQs { get; set; }
-        
+
 
         //        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //        {
@@ -112,6 +116,61 @@ namespace BL
 
 
             });
+
+            modelBuilder.Entity<VwStatYear>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("VwStatYear");
+
+
+            });
+
+
+
+            modelBuilder.Entity<VwStatMonth>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("VwStatMonth");
+
+
+            });
+
+
+
+
+
+            modelBuilder.Entity<VwStatMonthUser>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("VwStatMonthUser");
+
+
+            });
+
+
+
+
+
+            modelBuilder.Entity<VwStatYearUser>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("VwStatYearUser");
+
+
+            });
+
+
+
+
+
+
+
+
+
             modelBuilder.Entity<VwTasksAndUsers>(entity =>
             {
                 entity.HasNoKey();
