@@ -13,6 +13,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.Extensions.Configuration;
 using Domains;
+using Microsoft.AspNetCore.Http;
+using System.IO;
 
 namespace MobileAppDashBoard.Controllers
 {
@@ -42,11 +44,11 @@ namespace MobileAppDashBoard.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Register(HomePageModel oHomePageModel)
+        public async Task<IActionResult> Register(HomePageModel oHomePageModel,List<IFormFile> files)
         {
             try 
             {
-                
+
                 //if (ModelState.IsValid)
                 //{
                 //    var user = new ApplicationUser()
@@ -89,14 +91,14 @@ namespace MobileAppDashBoard.Controllers
                 //{
                 //    return View("LogIn", oHomePageModel);
                 //}
-
                
-                    var user = new ApplicationUser()
+                var user = new ApplicationUser()
                     {
                         Email = oHomePageModel.Email,
-                        UserName = oHomePageModel.Email
+                        UserName = oHomePageModel.Email,
+             
 
-                    };
+                };
                     var result = await Usermanager.CreateAsync(user, oHomePageModel.Password);
                     if (result.Succeeded)
                     {

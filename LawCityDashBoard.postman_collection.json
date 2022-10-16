@@ -51,7 +51,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://lawcity.app/api/LawsApi/d2a0f4ef-cc19-43d1-a7bd-851060149211",
+					"raw": "http://lawcity.app/api/LawsApi/9337371f-1635-4076-8ad5-d81a00912815",
 					"protocol": "http",
 					"host": [
 						"lawcity",
@@ -60,7 +60,7 @@
 					"path": [
 						"api",
 						"LawsApi",
-						"d2a0f4ef-cc19-43d1-a7bd-851060149211"
+						"9337371f-1635-4076-8ad5-d81a00912815"
 					]
 				}
 			},
@@ -72,7 +72,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://lawcity.app/api/LawsApi/d2a0f4ef-cc19-43d1-a7bd-851060149211",
+					"raw": "http://lawcity.app/api/QuestionMcqApi/9337371f-1635-4076-8ad5-d81a00912815",
 					"protocol": "http",
 					"host": [
 						"lawcity",
@@ -80,8 +80,8 @@
 					],
 					"path": [
 						"api",
-						"LawsApi",
-						"d2a0f4ef-cc19-43d1-a7bd-851060149211"
+						"QuestionMcqApi",
+						"9337371f-1635-4076-8ad5-d81a00912815"
 					]
 				}
 			},
@@ -93,7 +93,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://lawcity.app/api/QuestionMCQAnsweApi/ac817c55-dc2f-4a7b-b45d-98e9ae0da886",
+					"raw": "http://lawcity.app/api/QuestionMCQAnsweApi/ef341a5b-e0f0-48a9-973e-f704f8d44c9f",
 					"protocol": "http",
 					"host": [
 						"lawcity",
@@ -102,7 +102,7 @@
 					"path": [
 						"api",
 						"QuestionMCQAnsweApi",
-						"ac817c55-dc2f-4a7b-b45d-98e9ae0da886"
+						"ef341a5b-e0f0-48a9-973e-f704f8d44c9f"
 					]
 				}
 			},
@@ -115,7 +115,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \r\n    \"Email\" : \"dr_fahmedmostafa.2011@yahoo.co\",\r\n    \"Password\" : \"2812008b1\"\r\n    \r\n}",
+					"raw": "{\r\n    \r\n    \"Email\" : \"ahmedmostafadddddd710@gmail.com\",\r\n    \"Password\" : \"2812008a1A#dd\"\r\n    \r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -144,8 +144,34 @@
 				"method": "POST",
 				"header": [],
 				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \r\n    \"Email\" : \"dr_dzzzzzzfahmedmostafa.2011@yahoo.co\",\r\n    \"Password\" : \"2zzzzzqq812008b1\"\r\n    \r\n}",
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "PersonalImage",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "firstname",
+							"value": "Mostafa",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "attia",
+							"type": "text"
+						},
+						{
+							"key": "Email",
+							"value": "ahmedmostafadddddd710@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "Password",
+							"value": "2812008a1A#dd",
+							"type": "text"
+						}
+					],
 					"options": {
 						"raw": {
 							"language": "json"
@@ -174,7 +200,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://lawcity.app/api/LawsApi/",
+					"raw": "http://lawcity.app/api/LawsDetalisApi/",
 					"protocol": "http",
 					"host": [
 						"lawcity",
@@ -182,7 +208,7 @@
 					],
 					"path": [
 						"api",
-						"LawsApi",
+						"LawsDetalisApi",
 						""
 					]
 				}

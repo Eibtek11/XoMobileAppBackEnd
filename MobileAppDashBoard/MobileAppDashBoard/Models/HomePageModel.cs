@@ -23,7 +23,8 @@ namespace MobileAppDashBoard.Models
         public string Password { get; set; }
         public string ReturnUrl { get; set; }
 
-        
+        public string PersonalPhoto { get; set; }
+
         public ApplicationUser OneUser { get; set; }
 
         public IEnumerable<TbCountry> lstCountries { get; set; }

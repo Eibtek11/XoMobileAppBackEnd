@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using BL;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using MobileAppDashBoard.Models;
 using System;
 using System.Collections.Generic;
@@ -9,7 +11,7 @@ namespace MobileAppDashBoard.Controllers
 {
     public interface IAccountRepository
     {
-        Task<IdentityResult> SSignUpAsync(SignUpModel signUpModel);
-        Task<string> LLoginAsync(SignInModel signInModel);
+        Task<ApplicationUser> SSignUpAsync(SignUpModel signUpModel);
+        Task<ApplicationUser> LLoginAsync(SignInModel signInModel);
     }
 }

@@ -6,6 +6,7 @@ using MobileAppDashBoard.Models;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
+using System.IO;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
@@ -31,21 +32,34 @@ namespace MobileAppDashBoard.Controllers
 
 
 
-        public async Task<IdentityResult> SSignUpAsync(SignUpModel signUpModel)
+        public async Task<ApplicationUser> SSignUpAsync(SignUpModel signUpModel)
         {
+            
+                if (signUpModel.PersonalImage != null)
+                {
+                    string ImageName = Guid.NewGuid().ToString() + ".jpg";
+                    var filePaths = Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\Uploads", ImageName);
+                    using (var stream = System.IO.File.Create(filePaths))
+                    {
+                        await signUpModel.PersonalImage.CopyToAsync(stream);
+                    }
+                signUpModel.image = ImageName;
+                }
+         
             var user = new ApplicationUser()
             {
                 FirstName = signUpModel.FirstName,
-                LastName = signUpModel.LastName,
+                LastName = signUpModel.image,
                 Email = signUpModel.Email,
                 UserName = signUpModel.Email,
                 
             };
-
-            return await Usermanager.CreateAsync(user, signUpModel.Password);
+            await Usermanager.CreateAsync(user, signUpModel.Password);
+            var res2 = Usermanager.Users.Where(a => a.UserName == user.Email).FirstOrDefault();
+            return res2;
         }
 
-        public async Task<string> LLoginAsync(SignInModel signInModel)
+        public async Task<ApplicationUser> LLoginAsync(SignInModel signInModel)
         {
             var result = await SignInManager.PasswordSignInAsync(signInModel.Email, signInModel.Password, true, true);
 
@@ -56,7 +70,7 @@ namespace MobileAppDashBoard.Controllers
             else
             {
 
-                var res2 =Usermanager.Users.Where(a => a.UserName == signInModel.Email).FirstOrDefault().Id.ToString();
+                var res2 =Usermanager.Users.Where(a => a.UserName == signInModel.Email).FirstOrDefault();
 
                 return res2;
             }

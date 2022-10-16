@@ -21,16 +21,17 @@ namespace MobileAppDashBoard.Controllers
         }
 
         [HttpPost("signup")]
-        public async Task<IActionResult> SignUp([FromBody] SignUpModel signUpModel)
+        public async Task<IActionResult> SignUp([FromForm] SignUpModel signUpModel)
         {
             var result = await _accountRepository.SSignUpAsync(signUpModel);
 
-            if (result.Succeeded)
+            if (result == null)
             {
-                return Ok(result.Succeeded);
+                return Unauthorized();
+               
             }
+            return Ok(result);
 
-            return Unauthorized();
         }
 
         [HttpPost("login")]
@@ -38,7 +39,7 @@ namespace MobileAppDashBoard.Controllers
         {
             var result = await _accountRepository.LLoginAsync(signInModel);
 
-            if (string.IsNullOrEmpty(result))
+            if (result == null )
             {
                 return Unauthorized();
             }
