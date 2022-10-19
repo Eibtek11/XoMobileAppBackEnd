@@ -34,9 +34,9 @@ namespace MobileAppDashBoard.Controllers
 
         // GET api/<CountryApiController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public TbCountry Get(Guid id)
         {
-            return "value";
+            return ctx.TbCountries.Where(a => a.CountryId == id).FirstOrDefault();
         }
 
         // POST api/<CountryApiController>

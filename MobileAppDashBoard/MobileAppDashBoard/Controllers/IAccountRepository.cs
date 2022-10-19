@@ -13,5 +13,11 @@ namespace MobileAppDashBoard.Controllers
     {
         Task<ApplicationUser> SSignUpAsync(SignUpModel signUpModel);
         Task<ApplicationUser> LLoginAsync(SignInModel signInModel);
+
+        Task<ApplicationUser> EditUsers(EditUserViewModel editModel);
+
+        Task<ApplicationUser> ForgotPassword(ForgotPasswordViewModel model, IFormFileCollection files);
+        Task GenerateForgotPasswordTokenAsync(ApplicationUser user, IFormFileCollection files);
+        Task SendForgotPasswordEmail(ApplicationUser user, string token, IFormFileCollection files);
     }
 }

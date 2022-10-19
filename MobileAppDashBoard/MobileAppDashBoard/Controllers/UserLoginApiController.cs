@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using MobileAppDashBoard.Models;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,36 @@ namespace MobileAppDashBoard.Controllers
             {
                 return Unauthorized();
                
+            }
+            return Ok(result);
+
+        }
+
+        [HttpPost("edit")]
+        public async Task<IActionResult> edit([FromForm] EditUserViewModel editModel)
+        {
+            var result = await _accountRepository.EditUsers(editModel);
+
+            if (result == null)
+            {
+                return Unauthorized();
+
+            }
+            return Ok(result);
+
+        }
+
+
+        [HttpPost("forget")]
+        public async Task<IActionResult> forget([FromForm] ForgotPasswordViewModel forgetModel)
+        {
+            
+            var result = await _accountRepository.ForgotPassword(forgetModel , forgetModel.files);
+
+            if (result == null)
+            {
+                return Unauthorized();
+
             }
             return Ok(result);
 

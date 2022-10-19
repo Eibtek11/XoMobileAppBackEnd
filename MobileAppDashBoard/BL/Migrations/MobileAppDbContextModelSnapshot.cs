@@ -78,6 +78,9 @@ namespace BL.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
+                    b.Property<string>("image")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedEmail")
@@ -632,6 +635,32 @@ namespace BL.Migrations
                     b.ToView("VwLevelsAndLaws");
                 });
 
+            modelBuilder.Entity("Domains.VwLevelsAndLawsAndQuestionMCQ", b =>
+                {
+                    b.Property<Guid>("LawId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("LawName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("LevelId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("LevelName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("QestionSyntax")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("QuestionAnswer")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("QuestionId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.ToView("VwLevelsAndLawsAndQuestionMCQ");
+                });
+
             modelBuilder.Entity("Domains.VwLevelsAndLawsAndQuestions", b =>
                 {
                     b.Property<Guid>("LawId")
@@ -653,6 +682,56 @@ namespace BL.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.ToView("VwLevelsAndLawsAndQuestions");
+                });
+
+            modelBuilder.Entity("Domains.VwStatMonth", b =>
+                {
+                    b.Property<string>("MonthName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NumberOfLogIn")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.ToView("VwStatMonth");
+                });
+
+            modelBuilder.Entity("Domains.VwStatMonthUser", b =>
+                {
+                    b.Property<string>("MonthName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NumberOfUsers")
+                        .HasColumnType("int");
+
+                    b.ToView("VwStatMonthUser");
+                });
+
+            modelBuilder.Entity("Domains.VwStatYear", b =>
+                {
+                    b.Property<int>("NumberOfLogIn")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
+                    b.ToView("VwStatYear");
+                });
+
+            modelBuilder.Entity("Domains.VwStatYearUser", b =>
+                {
+                    b.Property<int>("NumberOfUsers")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
+                    b.ToView("VwStatYearUser");
                 });
 
             modelBuilder.Entity("Domains.VwTasksAndUsers", b =>

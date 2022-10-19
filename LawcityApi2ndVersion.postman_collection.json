@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "0f90394a-9698-47e6-9801-5ef0608caec8",
-		"name": "LawCityDashBoard",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"_postman_id": "eab7ac32-f9ff-4706-8e32-68ef169f9bbf",
+		"name": "LawcityApi2ndVersion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13191479"
 	},
 	"item": [
 		{
@@ -20,6 +21,27 @@
 					"path": [
 						"api",
 						"CountryApi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bring Data of One Country With its Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://lawcity.app/api/CountryApi/f8175899-2f59-46ec-80ef-07983df1b694",
+					"protocol": "http",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"CountryApi",
+						"f8175899-2f59-46ec-80ef-07983df1b694"
 					]
 				}
 			},
@@ -51,7 +73,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://lawcity.app/api/LawsApi/9337371f-1635-4076-8ad5-d81a00912815",
+					"raw": "http://lawcity.app/api/LawsApi/8cde04b7-d015-4126-b555-e9bbf13b75bc",
 					"protocol": "http",
 					"host": [
 						"lawcity",
@@ -60,7 +82,7 @@
 					"path": [
 						"api",
 						"LawsApi",
-						"9337371f-1635-4076-8ad5-d81a00912815"
+						"8cde04b7-d015-4126-b555-e9bbf13b75bc"
 					]
 				}
 			},
@@ -72,7 +94,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://lawcity.app/api/QuestionMcqApi/9337371f-1635-4076-8ad5-d81a00912815",
+					"raw": "http://lawcity.app/api/QuestionMcqApi/8cde04b7-d015-4126-b555-e9bbf13b75bc",
 					"protocol": "http",
 					"host": [
 						"lawcity",
@@ -81,7 +103,7 @@
 					"path": [
 						"api",
 						"QuestionMcqApi",
-						"9337371f-1635-4076-8ad5-d81a00912815"
+						"8cde04b7-d015-4126-b555-e9bbf13b75bc"
 					]
 				}
 			},
@@ -93,7 +115,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://lawcity.app/api/QuestionMCQAnsweApi/ef341a5b-e0f0-48a9-973e-f704f8d44c9f",
+					"raw": "http://lawcity.app/api/QuestionMCQAnsweApi/7f42a370-e571-4420-9dd3-f8a3d96010c7",
 					"protocol": "http",
 					"host": [
 						"lawcity",
@@ -102,7 +124,7 @@
 					"path": [
 						"api",
 						"QuestionMCQAnsweApi",
-						"ef341a5b-e0f0-48a9-973e-f704f8d44c9f"
+						"7f42a370-e571-4420-9dd3-f8a3d96010c7"
 					]
 				}
 			},
@@ -115,7 +137,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \r\n    \"Email\" : \"ahmedmostafadddddd710@gmail.com\",\r\n    \"Password\" : \"2812008a1A#dd\"\r\n    \r\n}",
+					"raw": "{\r\n    \r\n    \"Email\" : \"ahmedmostafa706@gmail.com\",\r\n    \"Password\" : \"2812008a1A#\"\r\n    \r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -149,34 +171,29 @@
 						{
 							"key": "PersonalImage",
 							"type": "file",
-							"src": []
+							"src": "/D:/CV/ART/8 6.jpg"
 						},
 						{
 							"key": "firstname",
-							"value": "Mostafa",
+							"value": "ahmed",
 							"type": "text"
 						},
 						{
 							"key": "lastname",
-							"value": "attia",
+							"value": "ali",
 							"type": "text"
 						},
 						{
 							"key": "Email",
-							"value": "ahmedmostafadddddd710@gmail.com",
+							"value": "aherddddrrdfsfreemedmostafa706@gmail.com",
 							"type": "text"
 						},
 						{
 							"key": "Password",
-							"value": "2812008a1A#dd",
+							"value": "2812008a1A@",
 							"type": "text"
 						}
-					],
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					]
 				},
 				"url": {
 					"raw": "https://lawcity.app/api/UserLoginApi/signup",
@@ -189,6 +206,113 @@
 						"api",
 						"UserLoginApi",
 						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit User Api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "PersonalImage",
+							"type": "file",
+							"src": "/C:/Users/USER/Desktop/images/Capture3.PNG"
+						},
+						{
+							"key": "firstname",
+							"value": "ayman",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "youssif",
+							"type": "text"
+						},
+						{
+							"key": "Email",
+							"value": "ahmedmostafa706@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "Password",
+							"value": "2812008a1A#",
+							"type": "text"
+						},
+						{
+							"key": "Id",
+							"value": "17111e24-b15f-4f00-b943-b3e11edcb9bc",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://lawcity.app/api/UserLoginApi/edit",
+					"protocol": "https",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"UserLoginApi",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password Api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Email",
+							"value": "ahmedmostafa706@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://lawcity.app/api/UserLoginApi/forget",
+					"protocol": "https",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"UserLoginApi",
+						"forget"
 					]
 				}
 			},
@@ -237,7 +361,7 @@
 			"response": []
 		},
 		{
-			"name": "Bring Data Of User with Detalis Copy 2",
+			"name": "Bring Data Of All Users with Detalis Copy 2",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -303,6 +427,27 @@
 						"api",
 						"TasksApi",
 						"17111e24-b15f-4f00-b943-b3e11edcb9bc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bring Data of One User With Its Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://lawcity.app/api/UserDetailsApi/ecef84a5-30b8-4ad9-b765-c791ebdd153b",
+					"protocol": "https",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"UserDetailsApi",
+						"ecef84a5-30b8-4ad9-b765-c791ebdd153b"
 					]
 				}
 			},

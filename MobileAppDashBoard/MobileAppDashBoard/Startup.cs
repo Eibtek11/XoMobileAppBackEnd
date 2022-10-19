@@ -1,4 +1,5 @@
 using BL;
+using EmailService;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -32,6 +33,11 @@ namespace MobileAppDashBoard
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var emailConfig = Configuration
+            .GetSection("EmailConfiguration")
+            .Get<EmailConfiguration>();
+            services.AddSingleton(emailConfig);
+            services.AddScoped<IEmailSender, EmailSender>();
             services.AddControllersWithViews();
             services.AddScoped<CountryService, ClsCountry>();
             services.AddScoped<LawService, ClsLaws>();
@@ -47,6 +53,8 @@ namespace MobileAppDashBoard
             services.AddScoped<replyToCommentService, ClsReplyToComments>();
             services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<UserQuestionAnswerService, ClsUserQuestionAnswer>();
+            services.AddScoped<UserCountryLawService, ClsUserCountryLaw>();
+            services.AddScoped<CommentsService, ClsComments>();
             services.AddDistributedMemoryCache();
             services.AddSession();
             services.AddHttpContextAccessor();

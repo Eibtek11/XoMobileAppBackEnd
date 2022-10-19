@@ -59,6 +59,10 @@ namespace MobileAppDashBoard.Models
         public IEnumerable<TbUserQestionAnswer> lstUserQestionAnswers { get; set; }
 
         public IEnumerable<TbLoginHistory> lstLogInHistories { get; set; }
+
+        public IEnumerable<TbTrUserCountryLaw> lstTbTrUserCountryLaw { get; set; }
+
+        public IEnumerable<TbComment> lstCommentS { get; set; }
         public IEnumerable<ApplicationUser> lstUsers { get; set; }
         public IEnumerable<VwLevelsAndLawsAndQuestionMCQ> lstLevelsAndLawsAndQuestionMCQ { get; set; }
         public IEnumerable<VwStatMonthUser> lstVwStatMonthUsers { get; set; }
