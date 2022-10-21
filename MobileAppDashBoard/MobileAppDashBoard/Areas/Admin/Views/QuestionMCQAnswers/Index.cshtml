@@ -861,7 +861,7 @@
                                     <td class="product-category">@item.QuestionAnswer</td>
                                 
                                     <td class="product-action">
-                                        <a asp-controller="QuestionMCQAnswers" asp-action="FormEdit" asp-route-id="@item.QuestionsMcqAnswerId"><span><i class="feather icon-edit"></i></span></a>
+                                        <a asp-controller="QuestionMCQAnswers" asp-action="FormEdit" asp-route-id="@item.QuestionsMcqAnswerId" asp-route-idd="@item.QuestionId"><span><i class="feather icon-edit"></i></span></a>
 
 
                                         <a asp-controller="QuestionMCQAnswers" asp-action="Delete" asp-route-id="@item.QuestionsMcqAnswerId"><span class="action-delete"><i class="feather icon-trash"></i></span></a>

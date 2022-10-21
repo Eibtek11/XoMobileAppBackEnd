@@ -43,6 +43,9 @@ namespace BL
         public virtual DbSet<VwStatYearUser> VwStatYearUsers { get; set; }
         public virtual DbSet<VwLevelsAndLawsAndQuestionMCQ> VwLevelsAndLawsAndQuestionMCQs { get; set; }
 
+        public virtual DbSet<VwOneApiCollectQuestions> VwOneApiCollectQuestions { get; set; }
+        
+
 
         //        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //        {
@@ -125,9 +128,17 @@ namespace BL
 
 
             });
+            modelBuilder.Entity<VwOneApiCollectQuestions>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("VwOneApiCollectQuestions");
 
 
+            });
 
+
+            
             modelBuilder.Entity<VwStatMonth>(entity =>
             {
                 entity.HasNoKey();

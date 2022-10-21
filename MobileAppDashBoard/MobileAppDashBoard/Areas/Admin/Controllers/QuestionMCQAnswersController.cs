@@ -40,7 +40,7 @@ namespace MobileAppDashBoard.Areas.Admin.Controllers
             model.lstQuestions = questionService.getAll();
             model.lstLevelsAndLawsAndQuestions = ctx.VwLevelsAndLawsAndQuestionss.ToList();
             model.lstQuestionMCQsAnswers = questionMCQAnswersService.getAll();
-            foreach(var item in model.lstQuestionMCQsAnswers)
+            foreach (var item in model.lstQuestionMCQsAnswers)
             {
                 item.UpdatedBy = ctx.TbQuestionsMCQS.Where(a => a.QuestionId == item.QuestionId).FirstOrDefault().QestionSyntax;
             }
@@ -134,11 +134,11 @@ namespace MobileAppDashBoard.Areas.Admin.Controllers
 
 
         }
-        public IActionResult FormEdit(Guid? id, Guid? questionid)
+        public IActionResult FormEdit(Guid? id, Guid? idd)
         {
             TbQuestionsMcqAnswers model = new TbQuestionsMcqAnswers();
             model = ctx.TbQuestionsMcqAnswerss.Where(a => a.QuestionsMcqAnswerId == id).FirstOrDefault();
-            model.QuestionId = questionid;
+            model.QuestionId = idd;
             ViewBag.Countries = countryService.getAll();
             return View(model);
 

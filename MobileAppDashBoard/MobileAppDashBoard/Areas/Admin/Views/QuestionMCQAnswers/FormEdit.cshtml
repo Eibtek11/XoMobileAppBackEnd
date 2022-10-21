@@ -840,6 +840,7 @@
                                                             <div class="col-md-4">
                                                                 <input asp-for="QuestionId" type="hidden" class="form-control">
                                                                 <input asp-for="QuestionsMcqAnswerId" type="hidden" class="form-control">
+
                                                                 <span>اسم الدولة</span>
                                                             </div>
                                                             @*<div class="col-md-8">
@@ -854,24 +855,25 @@
                                                             </div>
                                                             <div class="col-md-8">
                                                                 <input asp-for="QuestionsMcqAnswerSytntax" type="text" class="form-control" placeholder="صيغة الاجابةل">
+                                                                <input asp-for="QuestionAnswer" type="hidden" value="اجابة سوءال من المتعدد الاجابات" class="form-control">
                                                             </div>
                                                         </div>
                                                     </div>
+
+
                                                     <div class="col-12">
                                                         <div class="form-group row">
                                                             <div class="col-md-4">
                                                                 <span>الاجابة</span>
                                                             </div>
                                                             <div class="col-md-8">
-                                                                <select asp-for="QuestionAnswer" class="form-control">
-                                                                    <option value="1">صحيح</option>
-                                                                    <option value="0">خطا</option>
+                                                                <select asp-for="Notes" class="form-control">
+                                                                    <option value="صح">صح</option>
+                                                                    <option value="خطا">خطا</option>
                                                                 </select>
                                                             </div>
                                                         </div>
                                                     </div>
-
-
 
                                                     <div class="col-md-8 offset-md-4">
                                                         <button type="submit" class="btn btn-primary mr-1 mb-1">حفظ</button>

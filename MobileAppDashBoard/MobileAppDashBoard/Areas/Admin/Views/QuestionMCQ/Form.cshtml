@@ -861,19 +861,33 @@
                                                     <div class="col-12">
                                                         <div class="form-group row">
                                                             <div class="col-md-4">
-                                                                <span>الاجابة</span>
+                                                                <span>نوع السؤال</span>
                                                             </div>
                                                             <div class="col-md-8">
                                                                 <select asp-for="QuestionAnswer" class="form-control">
-                                                                    <option value="1">الاختيار الاول</option>
-                                                                    <option value="2">الاختيار الثاني</option>
-                                                                    <option value="3">الاختيار الثالث</option>
+                                                                    <option value="صح او خطا">صح او خطا</option>
+                                                                    <option value="اختيار من المتعدد">اختيار من المتعدد</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group row">
+                                                            <div class="col-md-4">
+                                                                <span>الاجابة</span>
+                                                            </div>
+                                                            <div class="col-md-8">
+
+                                                                <select asp-for="CreatedBy" class="form-control">
+                                                                    <option value="الاختيار الاول">الاختيار الاول</option>
+                                                                    <option value="الاخنيار الثاني">الاخنيار الثاني</option>
+                                                                    <option value="الاخنيار الثالث">الاخنيار الثالث</option>
                                                                 </select>
                                                             </div>
                                                         </div>
                                                     </div>
 
-
+                                                    
                                                     <div class="col-md-8 offset-md-4">
                                                         <button type="submit" class="btn btn-primary mr-1 mb-1">حفظ</button>
 
