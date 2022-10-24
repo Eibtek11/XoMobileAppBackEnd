@@ -3110,8 +3110,10 @@ C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\net
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\125120ef-ae72-40db-bdb6-52596e465824.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\1a513123-69c6-4652-bd73-10fe13be0cdd.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\1ca1c260-1b1a-4796-b171-734a8fcee77f.jpg
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\1d08766c-4449-4540-af57-0e323687befb.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\22395e9a-20b4-4292-8d9f-da25f7b95b36.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\2321b3e5-d02c-427e-9816-9c7185995230.jpg
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\23b86d8c-bc1e-48fe-81cf-abe1a236b2bd.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\25b369f8-a7b6-450b-8bf1-6b041d967079.pdf
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\29c231c7-6f28-4331-a449-9d0487c109d9.pdf
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\2c8ec3e3-1059-4d6d-8fa7-809c7d4dddd6.jpg
@@ -3119,11 +3121,14 @@ C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\net
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\30042ea4-15a6-46b3-a2a2-96d9ede2988d.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\306da405-7294-47ed-bf93-697e076c2c7c.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\31fc37c0-fe2f-4b22-95c8-725ea9fb4103.jpg
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\33e3e3eb-5951-4605-9953-35b4ed633de6.jpg
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\33fa3af3-b26e-43bc-aa83-692d36292e0e.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\34fa3014-dd74-433d-bc57-baf29bd617e0.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\35423d4b-a4b1-454b-8390-db89133e0dec.pdf
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\36c08f5c-8e82-4ec4-8628-2e7a3ad297a5.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\38b5003e-3856-447f-b738-924fd7cc447a.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\3cf58584-7fb3-4f41-befa-32575672c203.jpg
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\3d83006a-65c8-4e81-b296-e933e41f662c.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\405fe837-1a8c-43a0-b5ee-bf4b7e7fb6fe.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\43008e54-1a21-4370-8acf-9aa8f5a4c3b7.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\43e9937a-5966-4ee6-93ae-1e50434b3a91.jpg
@@ -3147,10 +3152,12 @@ C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\net
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\616d7524-30a5-40e8-95b2-338a64d0a50c.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\6bfaa416-900f-478b-a44d-984e099bd723.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\725430ac-9f3c-4555-a22d-1d3571602b28.jpg
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\75bc50e8-90d9-478b-bfdc-8d3d91182777.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\7bb00a66-909f-425e-818d-a65f4f74420d.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\7dafd9e8-7a01-4ccb-a41a-64229503e56e.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\7efd9a97-caad-44a3-81dc-9248463f877e.pdf
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\821f87d0-6bc1-4ea8-a9ee-4c3d5ac6ad1b.jpg
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\87ed2a4c-09a3-4b78-83ad-0a4a7f38d076.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\8b65bd70-d98d-46ae-8a0e-f28250d1ec3d.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\900107ae-bae8-4b99-8490-465d7b34649a.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\914c9df8-eca1-4503-bafb-4a84181c2b96.pdf
@@ -3190,6 +3197,7 @@ C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\net
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\f0268a46-8638-4dcf-9684-916f416542ca.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\f2c97830-2adb-4962-ac6c-8514524553c7.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\f9871109-ebd2-43b8-8924-d3ca2d963c3e.jpg
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\fafdff95-4230-413a-ba23-3d92a0ef0774.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploads\ff4a79ea-ba9f-48d2-b4f2-cfada73912be.jpg
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.Development.json
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.json

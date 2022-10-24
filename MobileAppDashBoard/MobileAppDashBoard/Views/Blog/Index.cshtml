@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "";
+}
+@model BL.MobileAppDbContext
+<table class="table">
+    <tr>
+        @*<th>Id</th>*@
+        <th>QestionSyntax</th>
+
+        <th>QuestionAnswers</th>
+
+        <th>Right Answer</th>
+       
+    </tr>
+    @foreach (var item in Model.TbQuestionsMCQLasts)
+    {
+        <tr>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.QuestionId)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.QestionSyntax)
+            </td>
+            <td>
+                @(item.Tags==null?String.Empty:String.Join(", ", item.Tags))
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuestionAnswer)
+            </td>
+          
+        </tr>
+    }
+</table>

@@ -148,3 +148,10 @@ C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netco
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\MobileAppDashBoard.dll
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\MobileAppDashBoard.pdb
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\MobileAppDashBoard.genruntimeconfig.cache
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Index.cshtml.g.cs
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Create.cshtml.g.cs
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Form.cshtml.g.cs
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Blog\Create.cshtml.g.cs
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Blog\Form.cshtml.g.cs
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Blog\Index.cshtml.g.cs
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Blog\FormEdit.cshtml.g.cs

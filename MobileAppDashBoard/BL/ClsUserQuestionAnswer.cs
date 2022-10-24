@@ -36,11 +36,28 @@ namespace BL
         {
             try
             {
+                bool add = true;
                 //_4ZsoftwareCompanyTestTaskContext o_4ZsoftwareCompanyTestTaskContext = new _4ZsoftwareCompanyTestTaskContext();
                 item.UserQuestionAnswerId = Guid.NewGuid();
-                ctx.TbUserQestionAnswers.Add(item);
+                foreach(var i in ctx.TbUserQestionAnswers.ToList())
+                {
+                    if(item.Id == i.Id && item.QuestionId == i.QuestionId)
+                    {
+
+                        add = false;
+                    }
+                   
+                   
+                }
+               if(add)
+                {
+                    ctx.Add(item);
+                    ctx.SaveChanges();
+                   
+                    return true;
+                }
                 ctx.SaveChanges();
-                return true;
+                return false;
             }
             catch (Exception ex)
             {

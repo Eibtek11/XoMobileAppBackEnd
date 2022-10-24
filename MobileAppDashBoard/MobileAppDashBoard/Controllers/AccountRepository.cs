@@ -1,4 +1,5 @@
 ﻿using BL;
+using Domains;
 using EmailService;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -20,12 +21,13 @@ namespace MobileAppDashBoard.Controllers
 {
     public class AccountRepository : IAccountRepository
     {
+        UserCountryLawService userCountryLawService;
         MobileAppDbContext Ctx;
         UserManager<ApplicationUser> Usermanager;
         SignInManager<ApplicationUser> SignInManager;
         private readonly IConfiguration _configuration;
         IEmailSender _emailSender;
-        public AccountRepository(IEmailSender emailSender,IConfiguration configuration, MobileAppDbContext ctx, UserManager<ApplicationUser> usermanager, SignInManager<ApplicationUser> signInManager)
+        public AccountRepository(UserCountryLawService UserCountryLawService,IEmailSender emailSender,IConfiguration configuration, MobileAppDbContext ctx, UserManager<ApplicationUser> usermanager, SignInManager<ApplicationUser> signInManager)
         {
             Usermanager = usermanager;
             SignInManager = signInManager;
@@ -33,11 +35,51 @@ namespace MobileAppDashBoard.Controllers
             _configuration = configuration;
             _emailSender = emailSender;
 
-
+            userCountryLawService = UserCountryLawService;
         }
 
 
+        public async Task <List<TbTrUserCountryLaw>> aaRecord( string id )
+        {
+            
+            
+            List<CalculateUserGrade> list = Ctx.CalculateUserGrades.ToList();
+            foreach (var i in Usermanager.Users)
+            {
+                int grade = 0;
+                foreach (var ii in list.Where(a => a.Id == i.Id))
+                {
+                    if (ii.CreatedBy == ii.UserAnswer)
+                    {
+                        grade += 100;
+                    }
 
+                   
+                }
+                if(grade>0)
+                {
+                    TbTrUserCountryLaw record = new TbTrUserCountryLaw();
+                    record.UserCountryLawId = Guid.NewGuid();
+                    record.Id = i.Id;
+                    record.CreatedBy = grade.ToString();
+                    record.CreatedDate = DateTime.Now;
+                    Ctx.TbTrUserCountryLaws.Add(record);
+
+                }
+               
+
+
+            }
+            Ctx.SaveChanges();
+            var res2 = Ctx.TbTrUserCountryLaws.ToList();
+            foreach (var i in Ctx.TbTrUserCountryLaws)
+            {
+                Ctx.TbTrUserCountryLaws.Remove(i);
+               
+            }
+            Ctx.SaveChanges();
+            return res2;
+        }
         public async Task<ApplicationUser> SSignUpAsync(SignUpModel signUpModel)
         {
             
@@ -112,21 +154,7 @@ namespace MobileAppDashBoard.Controllers
         [HttpPost]
         public async Task<ApplicationUser> EditUsers(EditUserViewModel model)
         {
-            if (model.PersonalImage != null)
-            {
-                string ImageName = Guid.NewGuid().ToString() + ".jpg";
-                var filePaths = Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\Uploads", ImageName);
-                using (var stream = System.IO.File.Create(filePaths))
-                {
-                    await model.PersonalImage.CopyToAsync(stream);
-                }
-                model.image = ImageName;
-            }
-            else
-            {
-                model.image = "6bfaa416-900f-478b-a44d-984e099bd723.jpg";
-
-            }
+           
             model.UserName = model.Email;
             var user = await Usermanager.FindByIdAsync(model.Id);
           
@@ -135,7 +163,7 @@ namespace MobileAppDashBoard.Controllers
                 user.UserName = model.UserName;
                 user.FirstName = model.FirstName;
                 user.LastName = model.LastName;
-                user.image = model.image;
+               
                
                
               
@@ -158,6 +186,54 @@ namespace MobileAppDashBoard.Controllers
 
                 
             }
+
+
+
+        [HttpPost]
+        public async Task<ApplicationUser> EditUsersImage(EditUserViewModel model)
+        {
+            if (model.PersonalImage != null)
+            {
+                string ImageName = Guid.NewGuid().ToString() + ".jpg";
+                var filePaths = Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\Uploads", ImageName);
+                using (var stream = System.IO.File.Create(filePaths))
+                {
+                    await model.PersonalImage.CopyToAsync(stream);
+                }
+                model.image = ImageName;
+            }
+            else
+            {
+                model.image = "6bfaa416-900f-478b-a44d-984e099bd723.jpg";
+
+            }
+            model.UserName = model.Email;
+            var user = await Usermanager.FindByIdAsync(model.Id);
+
+
+            user.image = model.image;
+
+
+
+
+
+
+
+
+            var result = await Usermanager.UpdateAsync(user);
+
+
+
+
+
+
+
+
+            return user;
+
+
+
+        }
 
 
 

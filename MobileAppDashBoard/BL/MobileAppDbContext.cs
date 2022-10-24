@@ -1,13 +1,96 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using Domains;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Newtonsoft.Json;
 
 #nullable disable
 
 namespace BL
 {
+    public  class TbQuestionsMCQLast
+    {
+       
+
+        public Guid QuestionId { get; set; }
+        public string QestionSyntax { get; set; }
+        public string QuestionAnswer { get; set; }
+        public Guid? LevelId { get; set; }
+        public string CreatedBy { get; set; }
+        public string UpdatedBy { get; set; }
+        public DateTime? CreatedDate { get; set; }
+        public DateTime? UpdatedDate { get; set; }
+        public string Notes { get; set; }
+
+        public virtual TbLevel Level { get; set; }
+        // Other properties are not displayed
+        internal string _Tags { get; set; }
+
+        
+        // Other properties are not displayed
+
+        [NotMapped]
+        public string[] Tags
+        {
+            get { return _Tags == null ? null : JsonConvert.DeserializeObject<string[]>(_Tags); }
+            set { _Tags = JsonConvert.SerializeObject(value); }
+        }
+
+      
+    }
+    public class Person
+    {
+        public string Name { get; set; }
+
+        public string Surname { get; set; }
+
+        public string Email { get; set; }
+    }
+    public class Blog
+    {
+        public int BlogId { get; set; }
+
+        public string Url { get; set; }
+
+        public List<Post> Posts { get; set; }
+        // Other properties are not displayed
+        internal string _Tags { get; set; }
+
+        internal string _Owner { get; set; }
+        // Other properties are not displayed
+
+        [NotMapped]
+        public string[] Tags
+        {
+            get { return _Tags == null ? null : JsonConvert.DeserializeObject<string[]>(_Tags); }
+            set { _Tags = JsonConvert.SerializeObject(value); }
+        }
+
+        [NotMapped]
+        public Person Owner
+        {
+            get { return _Owner == null ? null : JsonConvert.DeserializeObject<Person>(_Owner); }
+            set { _Owner = JsonConvert.SerializeObject(value); }
+        }
+    }
+
+    public class Post
+    {
+        public int PostId { get; set; }
+
+        public string Title { get; set; }
+
+        public string Content { get; set; }
+
+        public int BlogId { get; set; }
+
+        public Blog Blog { get; set; }
+
+
+    }
     public partial class MobileAppDbContext : IdentityDbContext<ApplicationUser>
     {
         public MobileAppDbContext()
@@ -43,10 +126,14 @@ namespace BL
         public virtual DbSet<VwStatYearUser> VwStatYearUsers { get; set; }
         public virtual DbSet<VwLevelsAndLawsAndQuestionMCQ> VwLevelsAndLawsAndQuestionMCQs { get; set; }
 
+        public virtual DbSet<Blog> Blogs { get; set; }
+
+        public virtual DbSet<TbQuestionsMCQLast> TbQuestionsMCQLasts { get; set; }
+
         public virtual DbSet<VwOneApiCollectQuestions> VwOneApiCollectQuestions { get; set; }
-        
 
 
+        public virtual DbSet<CalculateUserGrade> CalculateUserGrades { get; set; }
         //        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //        {
         //            if (!optionsBuilder.IsConfigured)
@@ -58,8 +145,26 @@ namespace BL
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<TbQuestionsMCQLast>()
+       .Property(b => b._Tags).HasColumnName("Tags");
+
+            modelBuilder.Entity<TbQuestionsMCQLast>(entity =>
+            {
+                entity.HasKey(e => e.QuestionId);
+
+                
+            });
+
+
+            modelBuilder.Entity<Blog>()
+        .Property(b => b._Tags).HasColumnName("Tags");
+
+            modelBuilder.Entity<Blog>()
+                .Property(b => b._Owner).HasColumnName("Owner");
             base.OnModelCreating(modelBuilder);
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
+
+
 
             modelBuilder.Entity<TbClaim>(entity =>
             {
@@ -128,6 +233,16 @@ namespace BL
 
 
             });
+            modelBuilder.Entity<CalculateUserGrade>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("CalculateUserGrade");
+
+
+            });
+
+            
             modelBuilder.Entity<VwOneApiCollectQuestions>(entity =>
             {
                 entity.HasNoKey();

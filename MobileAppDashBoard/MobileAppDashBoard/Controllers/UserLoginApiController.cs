@@ -48,6 +48,19 @@ namespace MobileAppDashBoard.Controllers
             return Ok(result);
 
         }
+        [HttpPost("editImage")]
+        public async Task<IActionResult> editImage([FromForm] EditUserViewModel editModel)
+        {
+            var result = await _accountRepository.EditUsersImage(editModel);
+
+            if (result == null)
+            {
+                return Unauthorized();
+
+            }
+            return Ok(result);
+
+        }
 
 
         [HttpPost("forget")]
@@ -61,7 +74,7 @@ namespace MobileAppDashBoard.Controllers
                 return Unauthorized();
 
             }
-            return Ok(result);
+            return Ok("There Is Email Has Been Sent to Your Email to Reset YourrPassword");
 
         }
 

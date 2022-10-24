@@ -148,3 +148,10 @@ C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\net
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\TbTrUserCountryLaw\Form.cshtml.g.cs
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\TbTrUserCountryLaw\Index.cshtml.g.cs
 C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Views\User\ResetPassword.cshtml.g.cs
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\Blog\Create.cshtml.g.cs
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\Blog\Form.cshtml.g.cs
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\Blog\FormEdit.cshtml.g.cs
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\Blog\Index.cshtml.g.cs
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Views\Blog\Create.cshtml.g.cs
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Views\Blog\Form.cshtml.g.cs
+C:\Users\USER\source\repos\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Views\Blog\Index.cshtml.g.cs
