@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "eab7ac32-f9ff-4706-8e32-68ef169f9bbf",
-		"name": "LawcityApi2ndVersion",
+		"name": "LawcityApi2ndVersion BookCommerce",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "13191479"
 	},
@@ -12,11 +12,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://lawcity.app/api/CountryApi",
-					"protocol": "http",
+					"raw": "https://bookecommerce.com/api/CountryApi",
+					"protocol": "https",
 					"host": [
-						"lawcity",
-						"app"
+						"bookecommerce",
+						"com"
 					],
 					"path": [
 						"api",
@@ -32,11 +32,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://lawcity.app/api/CountryApi/f8175899-2f59-46ec-80ef-07983df1b694",
-					"protocol": "http",
+					"raw": "https://bookecommerce.com/api/CountryApi/f8175899-2f59-46ec-80ef-07983df1b694",
+					"protocol": "https",
 					"host": [
-						"lawcity",
-						"app"
+						"bookecommerce",
+						"com"
 					],
 					"path": [
 						"api",
@@ -48,36 +48,16 @@
 			"response": []
 		},
 		{
-			"name": "Bring Data of The Laws and its Levels",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://lawcity.app/api/LawsApi",
-					"protocol": "http",
-					"host": [
-						"lawcity",
-						"app"
-					],
-					"path": [
-						"api",
-						"LawsApi"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Bring Data by LawID of The Laws and its Levels",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://lawcity.app/api/LawsAndItsLevelsApi/9a2ab631-ff2d-43a7-ba6d-e50053290171",
+					"raw": "https://bookecommerce.com/api/LawsAndItsLevelsApi/9a2ab631-ff2d-43a7-ba6d-e50053290171",
 					"protocol": "https",
 					"host": [
-						"lawcity",
-						"app"
+						"bookecommerce",
+						"com"
 					],
 					"path": [
 						"api",
@@ -95,7 +75,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \r\n    \"Email\" : \"ahmedmostafa706@gmail.com\",\r\n    \"Password\" : \"2812008a1A@\"\r\n    \r\n}",
+					"raw": "{\r\n    \r\n    \"Email\" : \"ahmedmostafa706@gmail.com\",\r\n    \"Password\" : \"2812008a1A#\"\r\n    \r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -103,11 +83,11 @@
 					}
 				},
 				"url": {
-					"raw": "https://lawcity.app/api/UserLoginApi/login",
+					"raw": "https://bookecommerce.com/api/UserLoginApi/login",
 					"protocol": "https",
 					"host": [
-						"lawcity",
-						"app"
+						"bookecommerce",
+						"com"
 					],
 					"path": [
 						"api",
@@ -129,7 +109,7 @@
 						{
 							"key": "PersonalImage",
 							"type": "file",
-							"src": "/D:/CV/ART/8 6.jpg"
+							"src": "/C:/Users/USER/Desktop/images/20.PNG"
 						},
 						{
 							"key": "firstname",
@@ -143,7 +123,7 @@
 						},
 						{
 							"key": "Email",
-							"value": "ahasdasdesssssrddddJJJrrdfsfreemedmostafa706@gmail.com",
+							"value": "asdfsdhsdfsdfasdasdesssssrddddJJJrrdfsfreemedmostafa706@gmail.com",
 							"type": "text"
 						},
 						{
@@ -154,11 +134,11 @@
 					]
 				},
 				"url": {
-					"raw": "https://lawcity.app/api/UserLoginApi/signup",
+					"raw": "https://bookecommerce.com/api/UserLoginApi/signup",
 					"protocol": "https",
 					"host": [
-						"lawcity",
-						"app"
+						"bookecommerce",
+						"com"
 					],
 					"path": [
 						"api",
@@ -175,11 +155,11 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "https://lawcity.app/api/UserRankingApi/addRecord?id=17111e24-b15f-4f00-b943-b3e11edcb9bc",
+					"raw": "https://bookecommerce.com/api/UserRankingApi/addRecord?id=17111e24-b15f-4f00-b943-b3e11edcb9bc",
 					"protocol": "https",
 					"host": [
-						"lawcity",
-						"app"
+						"bookecommerce",
+						"com"
 					],
 					"path": [
 						"api",
@@ -206,7 +186,7 @@
 					"formdata": [
 						{
 							"key": "firstname",
-							"value": "alidsfsd",
+							"value": "alidssdfsdffsd",
 							"type": "text"
 						},
 						{
@@ -228,20 +208,15 @@
 							"key": "Id",
 							"value": "17111e24-b15f-4f00-b943-b3e11edcb9bc",
 							"type": "text"
-						},
-						{
-							"key": "PersonalImage",
-							"type": "file",
-							"src": "/C:/Users/USER/Desktop/images/4.PNG"
 						}
 					]
 				},
 				"url": {
-					"raw": "https://lawcity.app/api/UserLoginApi/edit",
+					"raw": "https://bookecommerce.com/api/UserLoginApi/edit",
 					"protocol": "https",
 					"host": [
-						"lawcity",
-						"app"
+						"bookecommerce",
+						"com"
 					],
 					"path": [
 						"api",
@@ -273,11 +248,11 @@
 					]
 				},
 				"url": {
-					"raw": "https://lawcity.app/api/UserLoginApi/editImage",
+					"raw": "https://bookecommerce.com/api/UserLoginApi/editImage",
 					"protocol": "https",
 					"host": [
-						"lawcity",
-						"app"
+						"bookecommerce",
+						"com"
 					],
 					"path": [
 						"api",
@@ -324,11 +299,11 @@
 					]
 				},
 				"url": {
-					"raw": "https://lawcity.app/api/UserLoginApi/forget",
+					"raw": "https://bookecommerce.com/api/UserLoginApi/forget",
 					"protocol": "https",
 					"host": [
-						"lawcity",
-						"app"
+						"bookecommerce",
+						"com"
 					],
 					"path": [
 						"api",
@@ -345,11 +320,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://lawcity.app/api/LawsDetalisApi/",
-					"protocol": "http",
+					"raw": "https://bookecommerce.com/api/LawsDetalisApi/",
+					"protocol": "https",
 					"host": [
-						"lawcity",
-						"app"
+						"bookecommerce",
+						"com"
 					],
 					"path": [
 						"api",
@@ -366,11 +341,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://lawcity.app/api/ClaimsApi/",
-					"protocol": "http",
+					"raw": "https://bookecommerce.com/api/ClaimsApi/",
+					"protocol": "https",
 					"host": [
-						"lawcity",
-						"app"
+						"bookecommerce",
+						"com"
 					],
 					"path": [
 						"api",
@@ -387,11 +362,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://lawcity.app/api/UserApi/",
-					"protocol": "http",
+					"raw": "https://bookecommerce.com/api/UserApi/",
+					"protocol": "https",
 					"host": [
-						"lawcity",
-						"app"
+						"bookecommerce",
+						"com"
 					],
 					"path": [
 						"api",
@@ -417,11 +392,11 @@
 					}
 				},
 				"url": {
-					"raw": "https://lawcity.app/api/UserQestionAnswersApi/addAnswer",
+					"raw": "https://bookecommerce.com/api/UserQestionAnswersApi/addAnswer",
 					"protocol": "https",
 					"host": [
-						"lawcity",
-						"app"
+						"bookecommerce",
+						"com"
 					],
 					"path": [
 						"api",
@@ -433,21 +408,31 @@
 			"response": []
 		},
 		{
-			"name": "User Grades",
+			"name": "User Grades With Id Required",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Id",
+							"value": "17111e24-b15f-4f00-b943-b3e11edcb9bc",
+							"type": "text"
+						}
+					]
+				},
 				"url": {
-					"raw": "https://lawcity.app/api/UserQestionAnswersApi/17111e24-b15f-4f00-b943-b3e11edcb9bc",
+					"raw": "https://bookecommerce.com/api/UserQestionAnswersApi/getGrade",
 					"protocol": "https",
 					"host": [
-						"lawcity",
-						"app"
+						"bookecommerce",
+						"com"
 					],
 					"path": [
 						"api",
 						"UserQestionAnswersApi",
-						"17111e24-b15f-4f00-b943-b3e11edcb9bc"
+						"getGrade"
 					]
 				}
 			},
@@ -459,11 +444,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://lawcity.app/api/TasksApi/17111e24-b15f-4f00-b943-b3e11edcb9bc",
+					"raw": "https://bookecommerce.com/api/TasksApi/17111e24-b15f-4f00-b943-b3e11edcb9bc",
 					"protocol": "https",
 					"host": [
-						"lawcity",
-						"app"
+						"bookecommerce",
+						"com"
 					],
 					"path": [
 						"api",
@@ -480,11 +465,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://lawcity.app/api/TasksNumberApi/17111e24-b15f-4f00-b943-b3e11edcb9bc",
+					"raw": "https://bookecommerce.com/api/TasksNumberApi/17111e24-b15f-4f00-b943-b3e11edcb9bc",
 					"protocol": "https",
 					"host": [
-						"lawcity",
-						"app"
+						"bookecommerce",
+						"com"
 					],
 					"path": [
 						"api",
@@ -501,11 +486,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://lawcity.app/api/UserDetailsApi/ecef84a5-30b8-4ad9-b765-c791ebdd153b",
+					"raw": "https://bookecommerce.com/api/UserDetailsApi/ecef84a5-30b8-4ad9-b765-c791ebdd153b",
 					"protocol": "https",
 					"host": [
-						"lawcity",
-						"app"
+						"bookecommerce",
+						"com"
 					],
 					"path": [
 						"api",
@@ -517,51 +502,33 @@
 			"response": []
 		},
 		{
-			"name": "Bring Questions as Recomended",
+			"name": "Bring LevelQuestions as Recomended Copy 2",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": {
-					"raw": "https://lawcity.app/api/Values",
-					"protocol": "https",
-					"host": [
-						"lawcity",
-						"app"
-					],
-					"path": [
-						"api",
-						"Values"
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "99c8f85f-1b76-4e7d-9cac-307c39211d1b",
+							"type": "text"
+						}
 					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Bring LevelQuestions as Recomended Copy",
-			"request": {
-				"method": "GET",
-				"header": [],
+				},
 				"url": {
-					"raw": "https://lawcity.app/api/Values/99c8f85f-1b76-4e7d-9cac-307c39211d1b",
+					"raw": "https://bookecommerce.com/api/Values/getLevelQuestions",
 					"protocol": "https",
 					"host": [
-						"lawcity",
-						"app"
+						"bookecommerce",
+						"com"
 					],
 					"path": [
 						"api",
 						"Values",
-						"99c8f85f-1b76-4e7d-9cac-307c39211d1b"
+						"getLevelQuestions"
 					]
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "New Request",
-			"request": {
-				"method": "GET",
-				"header": []
 			},
 			"response": []
 		}

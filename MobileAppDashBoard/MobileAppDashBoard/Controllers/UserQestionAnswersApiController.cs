@@ -55,6 +55,42 @@ namespace MobileAppDashBoard.Controllers
             return new string[] { "value1", "value2" };
         }
 
+
+        [HttpPost("getGrade")]
+        public string getGrade([FromForm] TbUserQestionAnswer answerModel)
+        {
+            List<CalculateUserGrade> list = ctx.CalculateUserGrades.Where(a => a.Id == answerModel.Id).ToList();
+            int grade = 0;
+            string result = "";
+            foreach (var i in list)
+            {
+                if (i.CreatedBy == i.UserAnswer)
+                {
+                    grade += 100;
+                }
+
+            }
+
+            if (grade == 100)
+            {
+                result = "Good";
+            }
+            else if (grade == 200)
+            {
+                result = "Very Good";
+            }
+            else if (grade >= 300)
+            {
+                result = "Excellent";
+
+            }
+            else
+            {
+                result = "bad";
+            }
+            return result;
+
+        }
         // GET api/<UserQestionAnswersApiController>/5
         [HttpGet("{id}")]
         public string Get(string id)

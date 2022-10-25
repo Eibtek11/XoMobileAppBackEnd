@@ -36,6 +36,12 @@ namespace MobileAppDashBoard.Controllers
         {
             return ctx.TbQuestionsMCQLasts.Where(a => a.LevelId == id).ToList();
         }
+        [HttpPost("getLevelQuestions")]
+        public IEnumerable<TbQuestionsMCQLast> getLevelQuestions([FromForm] Guid id)
+        {
+
+            return ctx.TbQuestionsMCQLasts.Where(a => a.LevelId == id).ToList();
+        }
 
         // POST api/<ValuesController>
         [HttpPost]
