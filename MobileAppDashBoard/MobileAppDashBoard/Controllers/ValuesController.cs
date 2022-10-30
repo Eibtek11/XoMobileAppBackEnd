@@ -1,6 +1,7 @@
 ﻿using BL;
 using Domains;
 using Microsoft.AspNetCore.Mvc;
+using MobileAppDashBoard.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,10 +32,37 @@ namespace MobileAppDashBoard.Controllers
         }
 
         // GET api/<ValuesController>/5
-        [HttpGet("{id}")]
-        public IEnumerable<TbQuestionsMCQLast> Get(Guid id)
+        [HttpPost("levelComplete")]
+        public IActionResult levelComplete([FromForm] LevelComplete level)
         {
-            return ctx.TbQuestionsMCQLasts.Where(a => a.LevelId == id).ToList();
+            List<TbUserQestionAnswer> LstUserQestionAnswer = ctx.TbUserQestionAnswers.Where(a => a.Id == level.id).ToList();
+            List<TbQuestionsMCQLast> LstQuestionsMCQLast = new List<TbQuestionsMCQLast>();
+            LstQuestionsMCQLast = ctx.TbQuestionsMCQLasts.Where(a => a.LevelId == level.LevelId).ToList();
+            int count = LstQuestionsMCQLast.Count;
+            int countQ = 0;
+           
+            foreach (var item in LstQuestionsMCQLast)
+            {
+                foreach(var element in LstUserQestionAnswer)
+                {
+                    if (item.QuestionId == element.QuestionId  )
+                    {
+                        countQ++;
+                    }
+
+                }
+              
+              
+            }
+            if (countQ < count)
+            {
+                var result = ctx.TbQuestionsMCQLasts.Where(a => a.LevelId == level.LevelId).ToList();
+                return Ok(result);
+            }
+            else
+            {
+                return Unauthorized();
+            }
         }
         [HttpPost("getLevelQuestions")]
         public IEnumerable<TbQuestionsMCQLast> getLevelQuestions([FromForm] Guid id)

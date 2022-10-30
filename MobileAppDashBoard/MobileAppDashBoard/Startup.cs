@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -29,7 +30,7 @@ namespace MobileAppDashBoard
         }
 
         public IConfiguration Configuration { get; }
-
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -55,6 +56,24 @@ namespace MobileAppDashBoard
             services.AddScoped<UserQuestionAnswerService, ClsUserQuestionAnswer>();
             services.AddScoped<UserCountryLawService, ClsUserCountryLaw>();
             services.AddScoped<CommentsService, ClsComments>();
+            services.AddCors(options =>
+            {
+                options.AddPolicy(MyAllowSpecificOrigins,
+                builder => {
+                    //URLs are from the front-end (note that they changed
+                    //since posting my original question due to scrapping
+                    //the original projects and starting over)
+                    builder.WithOrigins("https://localhost:44398/", "https://bookecommerce.com/" , "https://lawcity.app/")
+                                     .AllowAnyHeader()
+                                     .AllowAnyMethod()
+                                     .AllowCredentials();
+                });
+            });
+            services.Configure<FormOptions>(o => {
+                o.ValueLengthLimit = int.MaxValue;
+                o.MultipartBodyLengthLimit = int.MaxValue;
+                o.MemoryBufferThreshold = int.MaxValue;
+            });
             services.AddDistributedMemoryCache();
             services.AddSession();
             services.AddHttpContextAccessor();
@@ -126,12 +145,13 @@ namespace MobileAppDashBoard
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseCookiePolicy();
+            app.UseCors(MyAllowSpecificOrigins);
             app.UseRouting();
 
             app.UseAuthentication();
             app.UseAuthorization();
-
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

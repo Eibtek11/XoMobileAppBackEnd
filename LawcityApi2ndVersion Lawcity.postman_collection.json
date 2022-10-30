@@ -1,0 +1,561 @@
+{
+	"info": {
+		"_postman_id": "8d8f29e8-06fd-4172-a13a-a8c83849dcf1",
+		"name": "LawcityApi2ndVersion Lawcity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13191479"
+	},
+	"item": [
+		{
+			"name": "Bring Data of Countries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://lawcity.app/api/CountryApi",
+					"protocol": "http",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"CountryApi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bring Data of One Country With its Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://lawcity.app/api/CountOneApi/f8175899-2f59-46ec-80ef-07983df1b694",
+					"protocol": "http",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"CountOneApi",
+						"f8175899-2f59-46ec-80ef-07983df1b694"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bring Data by LawID of The Laws and its Levels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://lawcity.app/api/LawsAndItsLevelsApi/9a2ab631-ff2d-43a7-ba6d-e50053290171",
+					"protocol": "https",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"LawsAndItsLevelsApi",
+						"9a2ab631-ff2d-43a7-ba6d-e50053290171"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"Email\" : \"ahmedmostafa706@gmail.com\",\r\n    \"Password\" : \"2812008a1A#\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lawcity.app/api/UserLoginApi/login",
+					"protocol": "https",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"UserLoginApi",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "PersonalImage",
+							"type": "file",
+							"src": "/C:/Users/USER/Desktop/images/20.PNG"
+						},
+						{
+							"key": "firstname",
+							"value": "ahmedSDF",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "ali",
+							"type": "text"
+						},
+						{
+							"key": "Email",
+							"value": "astafa706@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "Password",
+							"value": "2812008a1A@",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://lawcity.app/api/UserLoginApi/signup",
+					"protocol": "https",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"UserLoginApi",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Ranking 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://lawcity.app/api/UserRankingApi/addRecord?id=17111e24-b15f-4f00-b943-b3e11edcb9bc",
+					"protocol": "https",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"UserRankingApi",
+						"addRecord"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "17111e24-b15f-4f00-b943-b3e11edcb9bc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit User Api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstname",
+							"value": "alasd",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "youssifHFGHFGHfdsf",
+							"type": "text"
+						},
+						{
+							"key": "Email",
+							"value": "ahmedmostafa706@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "Password",
+							"value": "2812008a1A#",
+							"type": "text"
+						},
+						{
+							"key": "Id",
+							"value": "17111e24-b15f-4f00-b943-b3e11edcb9bc",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://lawcity.app/api/UserLoginApi/edit",
+					"protocol": "https",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"UserLoginApi",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit User Image Api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "PersonalImage",
+							"type": "file",
+							"src": "/C:/Users/USER/Desktop/images/4.PNG"
+						},
+						{
+							"key": "Id",
+							"value": "17111e24-b15f-4f00-b943-b3e11edcb9bc",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://lawcity.app/api/ImageUserChangeApi",
+					"protocol": "https",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"ImageUserChangeApi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password Api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Email",
+							"value": "ahmedmostafa706@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://lawcity.app/api/UserLoginApi/forget",
+					"protocol": "https",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"UserLoginApi",
+						"forget"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bring Data Of Laws with Detalis",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://lawcity.app/api/LawsDetalisApi/",
+					"protocol": "http",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"LawsDetalisApi",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bring Data Of Claims with Detalis Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://lawcity.app/api/ClaimsApi/",
+					"protocol": "http",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"ClaimsApi",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bring Data Of All Users with Detalis Copy 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://lawcity.app/api/UserApi/",
+					"protocol": "http",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"UserApi",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Qestion Answers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"Id\": \"3310f6ea-5dee-443d-8353-a4cb71a4a473\",\r\n    \"QuestionId\":\"15c4a06d-db3c-47e7-8401-cfa2d2e09ce4\",\r\n    \"UserAnswer\":\"75\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lawcity.app/api/UserQestionAnswersApi/addAnswer",
+					"protocol": "https",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"UserQestionAnswersApi",
+						"addAnswer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Grades With Id Required",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Id",
+							"value": "17111e24-b15f-4f00-b943-b3e11edcb9bc",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://lawcity.app/api/UserQestionAnswersApi/getGrade",
+					"protocol": "https",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"UserQestionAnswersApi",
+						"getGrade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bring User Tasks Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://lawcity.app/api/TasksApi/17111e24-b15f-4f00-b943-b3e11edcb9bc",
+					"protocol": "https",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"TasksApi",
+						"17111e24-b15f-4f00-b943-b3e11edcb9bc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bring User Count Of Tasks Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://lawcity.app/api/TasksNumberApi/17111e24-b15f-4f00-b943-b3e11edcb9bc",
+					"protocol": "https",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"TasksNumberApi",
+						"17111e24-b15f-4f00-b943-b3e11edcb9bc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bring Data of One User With Its Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://lawcity.app/api/UserDetailsApi/ecef84a5-30b8-4ad9-b765-c791ebdd153b",
+					"protocol": "https",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"UserDetailsApi",
+						"ecef84a5-30b8-4ad9-b765-c791ebdd153b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bring LevelQuestions as Recomended Copy 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "99c8f85f-1b76-4e7d-9cac-307c39211d1b",
+							"type": "text"
+						},
+						{
+							"key": "LevelId",
+							"value": "9e7bb9d0-7f8e-4f23-8bdf-ce6124f0b164",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://lawcity.app/api/Values/levelComplete",
+					"protocol": "https",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"Values",
+						"levelComplete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bring Laws By CountryId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://lawcity.app/api/LawsApi/f8175899-2f59-46ec-80ef-07983df1b694",
+					"protocol": "https",
+					"host": [
+						"lawcity",
+						"app"
+					],
+					"path": [
+						"api",
+						"LawsApi",
+						"f8175899-2f59-46ec-80ef-07983df1b694"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

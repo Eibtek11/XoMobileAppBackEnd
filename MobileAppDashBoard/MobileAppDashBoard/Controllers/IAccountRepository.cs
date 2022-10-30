@@ -12,6 +12,7 @@ namespace MobileAppDashBoard.Controllers
 {
     public interface IAccountRepository
     {
+        
         Task<List<TbTrUserCountryLaw>> aaRecord(string id);
         Task<ApplicationUser> SSignUpAsync(SignUpModel signUpModel);
         Task<ApplicationUser> LLoginAsync(SignInModel signInModel);

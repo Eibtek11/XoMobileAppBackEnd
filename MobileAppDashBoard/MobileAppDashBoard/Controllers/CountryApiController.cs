@@ -32,12 +32,7 @@ namespace MobileAppDashBoard.Controllers
             return model.lstCountries;
         }
 
-        // GET api/<CountryApiController>/5
-        [HttpGet("{id}")]
-        public TbCountry Get(Guid id)
-        {
-            return ctx.TbCountries.Where(a => a.CountryId == id).FirstOrDefault();
-        }
+       
 
         // POST api/<CountryApiController>
         [HttpPost]

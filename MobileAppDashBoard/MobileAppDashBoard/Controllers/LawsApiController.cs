@@ -45,9 +45,9 @@ namespace MobileAppDashBoard.Controllers
 
         // GET api/<LawsApiController>/5
         [HttpGet("{id}")]
-        public IEnumerable<TbQuestion> Get(Guid id)
+        public IEnumerable<TbLaw> Get(Guid id)
         {
-            return ctx.TbQuestions.Where(a=> a.LevelId == id).ToList();
+            return ctx.TbLaws.Where(a=> a.CountryId == id).ToList();
         }
 
         // POST api/<LawsApiController>
