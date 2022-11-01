@@ -50,29 +50,34 @@
 		{
 			"name": "Bring Data by LawID of The Laws and its Levels",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "17111e24-b15f-4f00-b943-b3e11edcb9bc",
+							"type": "text"
+						},
+						{
+							"key": "LevelId",
+							"value": "7d4bdb35-1cfa-43bd-ba5b-8a0180c0a6ee",
+							"type": "text"
+						}
+					]
+				},
 				"url": {
-					"raw": "http://lawcity.app/api/LawsAndItsLevelsApi/Check?id=17111e24-b15f-4f00-b943-b3e11edcb9bc&LevelId=7d4bdb35-1cfa-43bd-ba5b-8a0180c0a6ee",
-					"protocol": "http",
+					"raw": "https://bookecommerce.com/api/LawsAndItsLevelsApi/Check",
+					"protocol": "https",
 					"host": [
-						"lawcity",
-						"app"
+						"bookecommerce",
+						"com"
 					],
 					"path": [
 						"api",
 						"LawsAndItsLevelsApi",
 						"Check"
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": "17111e24-b15f-4f00-b943-b3e11edcb9bc"
-						},
-						{
-							"key": "LevelId",
-							"value": "7d4bdb35-1cfa-43bd-ba5b-8a0180c0a6ee"
-						}
 					]
 				}
 			},
