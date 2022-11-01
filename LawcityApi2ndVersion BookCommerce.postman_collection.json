@@ -53,16 +53,26 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://bookecommerce.com/api/LawsAndItsLevelsApi/9a2ab631-ff2d-43a7-ba6d-e50053290171",
-					"protocol": "https",
+					"raw": "http://lawcity.app/api/LawsAndItsLevelsApi/Check?id=17111e24-b15f-4f00-b943-b3e11edcb9bc&LevelId=7d4bdb35-1cfa-43bd-ba5b-8a0180c0a6ee",
+					"protocol": "http",
 					"host": [
-						"bookecommerce",
-						"com"
+						"lawcity",
+						"app"
 					],
 					"path": [
 						"api",
 						"LawsAndItsLevelsApi",
-						"9a2ab631-ff2d-43a7-ba6d-e50053290171"
+						"Check"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "17111e24-b15f-4f00-b943-b3e11edcb9bc"
+						},
+						{
+							"key": "LevelId",
+							"value": "7d4bdb35-1cfa-43bd-ba5b-8a0180c0a6ee"
+						}
 					]
 				}
 			},

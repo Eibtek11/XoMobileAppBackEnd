@@ -168,6 +168,8 @@ F:\New folder\MobileAppDashBoard\MobileAppDashBoard\bin\Debug\netcoreapp3.1\Mobi
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\bin\Debug\netcoreapp3.1\MobileAppDashBoard.Views.pdb
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\bin\Debug\netcoreapp3.1\Humanizer.dll
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\bin\Debug\netcoreapp3.1\MailKit.dll
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Facebook.dll
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Google.dll
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
@@ -293,6 +295,7 @@ F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razo
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Create.cshtml.g.cs
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Form.cshtml.g.cs
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Index.cshtml.g.cs
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Home\About.cshtml.g.cs
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Home\IndexCountries.cshtml.g.cs
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Home\LawPages.cshtml.g.cs

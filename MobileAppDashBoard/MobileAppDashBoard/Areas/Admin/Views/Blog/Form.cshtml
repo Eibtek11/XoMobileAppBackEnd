@@ -874,7 +874,7 @@
                                                                 <span>نوع السؤال</span>
                                                             </div>
                                                             <div class="col-md-8">
-                                                                <select asp-for="QuestionAnswer" class="form-control">
+                                                                <select id="basicSelect1" asp-for="QuestionAnswer" class="form-control">
                                                                     <option value="صح او خطا">صح او خطا</option>
                                                                     <option value="اختيار من المتعدد">اختيار من المتعدد</option>
                                                                 </select>
@@ -889,10 +889,10 @@
 
 
                                                             </div>
-                                                            <div class="col-md-8">
+                                                            <div id="basicSelect2" class="col-md-8">
                                                                 <input name="Tags[0]" class="form-control" />
                                                                 <input name="Tags[1]" class="form-control" />
-                                                                <input name="Tags[2]" class="form-control" />
+                                                               
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1035,7 +1035,30 @@
     <!-- END: Theme JS-->
     <!-- BEGIN: Page JS-->
     <!-- END: Page JS-->
+    <script>
+        var container = document.getElementById("basicSelect2");
+        $('#basicSelect1').change(function () {
+           
+            if (($(this).val()) == 'اختيار من المتعدد') 
+            {
+                
+                var input = document.createElement("input");
+               input.id = "basicSelect3"
+                input.name = "Tags[2]";
+                input.classList.add("form-control");
+                container.appendChild(input);
+            }
+            else {
+                $('#basicSelect3').remove();
 
+            }
+            
+
+
+        });
+
+      
+    </script>
 </body>
 <!-- END: Body-->
 

@@ -1,0 +1,12 @@
+﻿<p><a asp-area="" asp-controller="Home" asp-action="gLogin">Login</a></p>
+<ul>
+    @if (Context.User.Identity.IsAuthenticated)
+    {
+        <li>
+            <a>Hello @User.Identity.Name</a>
+        </li>
+        <li>
+            <a asp-controller="Home" asp-action="gLogout">Logout</a>
+        </li>
+    }
+</ul>

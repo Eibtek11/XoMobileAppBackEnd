@@ -17,6 +17,9 @@ using Microsoft.AspNetCore.Http;
 using System.IO;
 using Microsoft.AspNetCore.Authorization;
 using EmailService;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Authentication;
 
 namespace MobileAppDashBoard.Controllers
 {
@@ -370,5 +373,10 @@ namespace MobileAppDashBoard.Controllers
             }
             return View(model);
         }
+
+
+
+
+      
     }
 }

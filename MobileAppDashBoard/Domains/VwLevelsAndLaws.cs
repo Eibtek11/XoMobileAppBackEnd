@@ -13,7 +13,8 @@ namespace Domains
        
         public string LawName { get; set; }
         public Guid? CountryId { get; set; }
-       
-       
+        public string CreatedBy { get; set; }
+
+
     }
 }

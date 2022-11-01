@@ -3225,6 +3225,8 @@ F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Pu
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\MobileAppDashBoard.runtimeconfig.json
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\MobileAppDashBoard.pdb
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\MailKit.dll
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.Authentication.Facebook.dll
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.Authentication.Google.dll
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.Cryptography.Internal.dll
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll

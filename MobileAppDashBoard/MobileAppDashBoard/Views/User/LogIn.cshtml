@@ -171,9 +171,13 @@
                                                     <div class="divider-text">OR</div>
                                                 </div>
                                                 <div class="footer-btn d-inline">
-                                                    <a href="#" class="btn btn-facebook"><span class="fa fa-facebook"></span></a>
+                                                <a href="https://localhost:44398/SignIn-FaceBook" class="btn btn-facebook"><span class="fa fa-facebook"></span></a>
                                                     <a href="#" class="btn btn-twitter white"><span class="fa fa-twitter"></span></a>
-                                                    <a href="#" class="btn btn-google"><span class="fa fa-google"></span></a>
+                                                <a  asp-controller="User" asp-action="gLogin" type="button"
+                                                       value="Login with Google" class="btn btn-success" ></a>
+                                                <a>
+                                                    <a asp-controller="Home" asp-action="gLogout">Logout</a>
+                                                </a>
                                                     <a href="#" class="btn btn-github"><span class="fa fa-github-alt"></span></a>
                                                 </div>
                                             </div>
@@ -201,7 +205,7 @@
     <!-- END: Theme JS-->
     <!-- BEGIN: Page JS-->
     <!-- END: Page JS-->
-
+   
 </body>
 <!-- END: Body-->
 

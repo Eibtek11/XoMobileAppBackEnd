@@ -312,3 +312,6 @@ F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Mo
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\MobileAppDashBoard.dll
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\MobileAppDashBoard.pdb
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\MobileAppDashBoard.genruntimeconfig.cache
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Facebook.dll
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Google.dll
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Views\Home\About.cshtml.g.cs

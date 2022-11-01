@@ -42,11 +42,48 @@ namespace MobileAppDashBoard.Controllers
         }
 
         // GET api/<LawsAndItsLevelsApiController>/5
-        [HttpGet("{id}")]
-        public IEnumerable<VwLevelsAndLaws> Get(Guid id)
+        [HttpPost("Check")]
+        public IEnumerable<VwLevelsAndLaws> Check([FromForm] LevelComplete level)
         {
             HomePageModel model = new HomePageModel();
-            model.lstLevelsAndLaws = ctx.VwLevelsAndLawss.Where(a=> a.LawId == id).ToList();
+            model.lstLevelsAndLaws = ctx.VwLevelsAndLawss.Where(a => a.LawId == level.LevelId).ToList();
+            string result = "false";
+            foreach(var i in model.lstLevelsAndLaws)
+            {
+            List<TbUserQestionAnswer> LstUserQestionAnswer = ctx.TbUserQestionAnswers.Where(a => a.Id == level.id).ToList();
+            List<TbQuestionsMCQLast> LstQuestionsMCQLast = new List<TbQuestionsMCQLast>();
+            LstQuestionsMCQLast = ctx.TbQuestionsMCQLasts.Where(a => a.LevelId == i.LevelId).ToList();
+            int count = LstQuestionsMCQLast.Count;
+            int countQ = 0;
+
+            foreach (var item in LstQuestionsMCQLast)
+            {
+                foreach (var element in LstUserQestionAnswer)
+                {
+                    if (item.QuestionId == element.QuestionId)
+                    {
+                        countQ++;
+                    }
+
+                }
+
+
+            }
+            if (countQ < count)
+            {
+                 result = "false";
+                    i.CreatedBy = result;
+               
+            }
+            else
+            {
+                result = "true";
+                i.CreatedBy = result;
+                }
+
+            }
+           
+           
             return model.lstLevelsAndLaws;
         }
 

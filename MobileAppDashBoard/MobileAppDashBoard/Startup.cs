@@ -1,12 +1,15 @@
 using BL;
 using EmailService;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -34,6 +37,22 @@ namespace MobileAppDashBoard
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
+            services.AddAuthentication(options =>
+            {
+                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+            })
+          .AddCookie(options =>
+          {
+              options.LoginPath = "/account/google-login";
+          })
+          .AddGoogle(GoogleDefaults.AuthenticationScheme, options =>
+          {
+              options.ClientId = Configuration["Authentication:Google:ClientId"];
+              options.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
+              options.ClaimActions.MapJsonKey("urn:google:picture", "picture", "url");
+          });
             var emailConfig = Configuration
             .GetSection("EmailConfiguration")
             .Get<EmailConfiguration>();
@@ -88,30 +107,31 @@ namespace MobileAppDashBoard
 
             }).AddErrorDescriber<CustomIdentityErrorDescriber>().AddEntityFrameworkStores<MobileAppDbContext>().AddDefaultTokenProviders();
 
-          //  services.AddAuthentication(option =>
-          //  {
-          //      option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-          //      option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-          //      option.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-          //  })
-          //      .AddCookie("Cookies", options =>
-          //      {
-          //          options.LoginPath = "/login";
-          //          options.ExpireTimeSpan = TimeSpan.FromDays(1);
-          //      })
-          //.AddJwtBearer(option =>
-          //option.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
-          //{
+            //  services.AddAuthentication(option =>
+            //  {
+            //      option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            //      option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            //      option.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            //  })
+            //      .AddCookie("Cookies", options =>
+            //      {
+            //          options.LoginPath = "/login";
+            //          options.ExpireTimeSpan = TimeSpan.FromDays(1);
+            //      })
+            //.AddJwtBearer(option =>
+            //option.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+            //{
 
-          //    ValidateIssuer = true,
-          //    ValidateAudience = true,
-          //    ValidAudience = Configuration["JWT:ValidAudience"],
-          //    ValidIssuer = Configuration["JWT:ValidIssuer"],
-          //    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Secret"]))
+            //    ValidateIssuer = true,
+            //    ValidateAudience = true,
+            //    ValidAudience = Configuration["JWT:ValidAudience"],
+            //    ValidIssuer = Configuration["JWT:ValidIssuer"],
+            //    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Secret"]))
 
-          //});
-
-
+            //});
+            
+           
+            
 
 
 

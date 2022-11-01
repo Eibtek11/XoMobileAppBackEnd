@@ -31,6 +31,38 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Authentication.Facebook/3.1.3": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Facebook.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Facebook.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Microsoft.AspNetCore.Authentication.Google/3.1.17": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.17": {
         "type": "package",
         "dependencies": {
@@ -2155,6 +2187,35 @@
         "lib/netstandard2.1/MailKit.xml",
         "mailkit.3.4.1.nupkg.sha512",
         "mailkit.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.Facebook/3.1.3": {
+      "sha512": "2WEElyYsbxybqZRR922UAgRszWl+LjZCHxKD8/xga90a/yjWQzmKhj2LgIUlnR870AU4jjb5nFfg9pRZZV1nTA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.facebook/3.1.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Facebook.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Facebook.xml",
+        "microsoft.aspnetcore.authentication.facebook.3.1.3.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.facebook.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.Google/3.1.17": {
+      "sha512": "U+GYbzmkGcSvtxAZNPb9GHYqB6NLBpqJ1QGgDjVt3DSMXPAobDxj5otF3wH4qnqMvo2QMc7j6cYVjqHpRwVcyw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.google/3.1.17",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.xml",
+        "microsoft.aspnetcore.authentication.google.3.1.17.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.google.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.17": {
@@ -6800,6 +6861,8 @@
       "Domains >= 1.0.0",
       "EmailServices >= 1.0.0",
       "MailKit >= 3.4.1",
+      "Microsoft.AspNetCore.Authentication.Facebook >= 3.1.3",
+      "Microsoft.AspNetCore.Authentication.Google >= 3.1.17",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.1.17",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.17",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.17",
@@ -6866,6 +6929,14 @@
           "MailKit": {
             "target": "Package",
             "version": "[3.4.1, )"
+          },
+          "Microsoft.AspNetCore.Authentication.Facebook": {
+            "target": "Package",
+            "version": "[3.1.3, )"
+          },
+          "Microsoft.AspNetCore.Authentication.Google": {
+            "target": "Package",
+            "version": "[3.1.17, )"
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
