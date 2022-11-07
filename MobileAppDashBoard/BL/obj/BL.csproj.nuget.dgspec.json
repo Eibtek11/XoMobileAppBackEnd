@@ -49,6 +49,10 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "dependencies": {
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.57.0, )"
+            },
             "MailKit": {
               "target": "Package",
               "version": "[3.4.1, )"
@@ -137,6 +141,10 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "dependencies": {
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.57.0, )"
+            },
             "MailKit": {
               "target": "Package",
               "version": "[3.4.1, )"

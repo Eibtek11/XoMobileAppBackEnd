@@ -68,6 +68,11 @@ namespace MobileAppDashBoard.Models
         public IEnumerable<VwStatMonthUser> lstVwStatMonthUsers { get; set; }
         public IEnumerable<VwStatYearUser> lstVwStatYearUsers { get; set; }
 
+        public IEnumerable<TbLawLevelOne> lstLawLevelOneS { get; set; }
+
+
+        public IEnumerable<TbLawLevelTwo> lstLawLevelTwoS { get; set; }
+
         #endregion
 
     }

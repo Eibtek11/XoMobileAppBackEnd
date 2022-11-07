@@ -1,5 +1,6 @@
 ﻿using BL;
 using Domains;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MobileAppDashBoard.Models;
 using System;
@@ -25,8 +26,10 @@ namespace MobileAppDashBoard.Controllers
         }
         // GET: api/<CountryApiController>
         [HttpGet]
+        [Authorize]
         public IEnumerable<TbCountry> Get()
         {
+            var user = this.User;
             HomePageModel model = new HomePageModel();
             model.lstCountries = countryService.getAll();
             return model.lstCountries;

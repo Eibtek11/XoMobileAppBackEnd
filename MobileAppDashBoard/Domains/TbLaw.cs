@@ -10,6 +10,7 @@ namespace Domains
         public TbLaw()
         {
             TbLevels = new HashSet<TbLevel>();
+            TbLawLevelOnes = new HashSet<TbLawLevelOne>();
         }
 
         public Guid LawId { get; set; }
@@ -25,5 +26,6 @@ namespace Domains
 
         public virtual TbCountry Country { get; set; }
         public virtual ICollection<TbLevel> TbLevels { get; set; }
+        public virtual ICollection<TbLawLevelOne> TbLawLevelOnes { get; set; }
     }
 }

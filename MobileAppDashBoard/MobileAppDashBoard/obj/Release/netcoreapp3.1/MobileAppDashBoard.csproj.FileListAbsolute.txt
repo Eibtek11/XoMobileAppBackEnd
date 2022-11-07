@@ -296,7 +296,6 @@ F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Ra
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Views\Home\IndexCountries.cshtml.g.cs
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Views\Home\LawPages.cshtml.g.cs
-F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -315,3 +314,15 @@ F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Mo
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Facebook.dll
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Google.dll
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Views\Home\About.cshtml.g.cs
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\bin\Release\netcoreapp3.1\Google.Apis.dll
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\bin\Release\netcoreapp3.1\Google.Apis.Auth.PlatformServices.dll
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\bin\Release\netcoreapp3.1\Google.Apis.Auth.dll
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\bin\Release\netcoreapp3.1\Google.Apis.Core.dll
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Views\Account2\Login.cshtml.g.cs
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Views\Account\Privacy.cshtml.g.cs
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Views\Home\Privacyy.cshtml.g.cs
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\LawLevelOne\Form.cshtml.g.cs
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\LawLevelOne\Index.cshtml.g.cs
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\LawLevelTwo\Form.cshtml.g.cs
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\LawLevelTwo\Form2.cshtml.g.cs
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\LawLevelTwo\Index.cshtml.g.cs

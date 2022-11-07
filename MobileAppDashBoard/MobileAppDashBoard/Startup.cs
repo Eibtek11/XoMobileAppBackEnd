@@ -37,22 +37,27 @@ namespace MobileAppDashBoard
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
-            services.AddAuthentication(options =>
-            {
-                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
-            })
-          .AddCookie(options =>
-          {
-              options.LoginPath = "/account/google-login";
-          })
-          .AddGoogle(GoogleDefaults.AuthenticationScheme, options =>
-          {
-              options.ClientId = Configuration["Authentication:Google:ClientId"];
-              options.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
-              options.ClaimActions.MapJsonKey("urn:google:picture", "picture", "url");
-          });
+            services.AddAuthentication()
+               .AddGoogle(options =>
+               {
+                   options.ClientId = "847407989643-nfnss6bf9pu9brbf1l88qtvjok7qce49.apps.googleusercontent.com";
+                   options.ClientSecret = "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";
+               });
+            //  services.AddAuthentication(options =>
+            //  {
+            //      options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            //      options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+            //  })
+            //.AddCookie(options =>
+            //{
+            //    options.LoginPath = "/account/google-login";
+            //})
+            //.AddGoogle(GoogleDefaults.AuthenticationScheme, options =>
+            //{
+            //    options.ClientId = Configuration["Authentication:Google:ClientId"];
+            //    options.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
+            //    options.ClaimActions.MapJsonKey("urn:google:picture", "picture", "url");
+            //});
             var emailConfig = Configuration
             .GetSection("EmailConfiguration")
             .Get<EmailConfiguration>();
@@ -75,6 +80,8 @@ namespace MobileAppDashBoard
             services.AddScoped<UserQuestionAnswerService, ClsUserQuestionAnswer>();
             services.AddScoped<UserCountryLawService, ClsUserCountryLaw>();
             services.AddScoped<CommentsService, ClsComments>();
+            services.AddScoped<LawLevelOneService, ClsLawsLevelOne>();
+            services.AddScoped<LawLevelTwoService, ClsLawsLevelTwo>();
             services.AddCors(options =>
             {
                 options.AddPolicy(MyAllowSpecificOrigins,
@@ -129,9 +136,9 @@ namespace MobileAppDashBoard
             //    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Secret"]))
 
             //});
-            
-           
-            
+
+
+
 
 
 
@@ -144,10 +151,13 @@ namespace MobileAppDashBoard
                 options.LoginPath = "/User/LogIn";
                 options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
                 options.SlidingExpiration = true;
+                
 
 
             });
-         
+
+          
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -172,7 +182,7 @@ namespace MobileAppDashBoard
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseSession();
-
+           
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

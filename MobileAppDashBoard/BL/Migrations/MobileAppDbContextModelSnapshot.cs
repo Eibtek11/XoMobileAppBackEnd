@@ -94,6 +94,119 @@ namespace BL.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("BL.Blog", b =>
+                {
+                    b.Property<int>("BlogId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Url")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("_Owner")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Owner");
+
+                    b.Property<string>("_Tags")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Tags");
+
+                    b.HasKey("BlogId");
+
+                    b.ToTable("Blogs");
+                });
+
+            modelBuilder.Entity("BL.Post", b =>
+                {
+                    b.Property<int>("PostId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("BlogId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("PostId");
+
+                    b.HasIndex("BlogId");
+
+                    b.ToTable("Post");
+                });
+
+            modelBuilder.Entity("BL.TbQuestionsMCQLast", b =>
+                {
+                    b.Property<Guid>("QuestionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("LevelId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Notes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("QestionSyntax")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("QuestionAnswer")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("_Tags")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Tags");
+
+                    b.HasKey("QuestionId");
+
+                    b.HasIndex("LevelId");
+
+                    b.ToTable("TbQuestionsMCQLasts");
+                });
+
+            modelBuilder.Entity("Domains.CalculateUserGrade", b =>
+                {
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("LevelId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("QestionSyntax")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("QuestionAnswer")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("QuestionId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("UserAnswer")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.ToView("CalculateUserGrade");
+                });
+
             modelBuilder.Entity("Domains.TbClaim", b =>
                 {
                     b.Property<Guid>("ClaimId")
@@ -255,6 +368,96 @@ namespace BL.Migrations
                     b.HasIndex("CountryId");
 
                     b.ToTable("TbLaw");
+                });
+
+            modelBuilder.Entity("Domains.TbLawLevelOne", b =>
+                {
+                    b.Property<Guid>("LawLevelOneId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime");
+
+                    b.Property<Guid>("LawId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("LawLevelOneDescription")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("LawLevelOneName")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("LawLevelOnePdf")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("Notes")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime");
+
+                    b.HasKey("LawLevelOneId");
+
+                    b.HasIndex("LawId");
+
+                    b.ToTable("TbLawLevelOne");
+                });
+
+            modelBuilder.Entity("Domains.TbLawLevelTwo", b =>
+                {
+                    b.Property<Guid>("LawLevelTwoId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime");
+
+                    b.Property<Guid>("LawLevelOneId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("LawLevelTwoDescription")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("LawLevelTwoName")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("LawLevelTwoPdf")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("Notes")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime");
+
+                    b.HasKey("LawLevelTwoId");
+
+                    b.HasIndex("LawLevelOneId");
+
+                    b.ToTable("TbLawLevelTwo");
                 });
 
             modelBuilder.Entity("Domains.TbLevel", b =>
@@ -620,6 +823,9 @@ namespace BL.Migrations
                     b.Property<Guid?>("CountryId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<Guid?>("LawId")
                         .HasColumnType("uniqueidentifier");
 
@@ -682,6 +888,38 @@ namespace BL.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.ToView("VwLevelsAndLawsAndQuestions");
+                });
+
+            modelBuilder.Entity("Domains.VwOneApiCollectQuestions", b =>
+                {
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("LevelId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Notes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("QestionSyntax")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("QuestionAnswer")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("QuestionId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.ToView("VwOneApiCollectQuestions");
                 });
 
             modelBuilder.Entity("Domains.VwStatMonth", b =>
@@ -891,6 +1129,26 @@ namespace BL.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("BL.Post", b =>
+                {
+                    b.HasOne("BL.Blog", "Blog")
+                        .WithMany("Posts")
+                        .HasForeignKey("BlogId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Blog");
+                });
+
+            modelBuilder.Entity("BL.TbQuestionsMCQLast", b =>
+                {
+                    b.HasOne("Domains.TbLevel", "Level")
+                        .WithMany()
+                        .HasForeignKey("LevelId");
+
+                    b.Navigation("Level");
+                });
+
             modelBuilder.Entity("Domains.TbClaim", b =>
                 {
                     b.HasOne("Domains.TbCountry", "Country")
@@ -909,6 +1167,30 @@ namespace BL.Migrations
                         .HasConstraintName("FK_TbLaw_TbCountry");
 
                     b.Navigation("Country");
+                });
+
+            modelBuilder.Entity("Domains.TbLawLevelOne", b =>
+                {
+                    b.HasOne("Domains.TbLaw", "law")
+                        .WithMany("TbLawLevelOnes")
+                        .HasForeignKey("LawId")
+                        .HasConstraintName("FK_TbLawLevelOne_TbLaw")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("law");
+                });
+
+            modelBuilder.Entity("Domains.TbLawLevelTwo", b =>
+                {
+                    b.HasOne("Domains.TbLawLevelOne", "lawOne")
+                        .WithMany("TbLawLevelTwos")
+                        .HasForeignKey("LawLevelOneId")
+                        .HasConstraintName("FK_TbLawLevelTwo_TbLawLevelOne")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("lawOne");
                 });
 
             modelBuilder.Entity("Domains.TbLevel", b =>
@@ -1028,6 +1310,11 @@ namespace BL.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("BL.Blog", b =>
+                {
+                    b.Navigation("Posts");
+                });
+
             modelBuilder.Entity("Domains.TbComment", b =>
                 {
                     b.Navigation("TbReplyToComments");
@@ -1042,7 +1329,14 @@ namespace BL.Migrations
 
             modelBuilder.Entity("Domains.TbLaw", b =>
                 {
+                    b.Navigation("TbLawLevelOnes");
+
                     b.Navigation("TbLevels");
+                });
+
+            modelBuilder.Entity("Domains.TbLawLevelOne", b =>
+                {
+                    b.Navigation("TbLawLevelTwos");
                 });
 
             modelBuilder.Entity("Domains.TbLevel", b =>

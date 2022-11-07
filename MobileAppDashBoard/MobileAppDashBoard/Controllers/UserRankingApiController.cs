@@ -54,6 +54,14 @@ namespace MobileAppDashBoard.Controllers
             return result;
             
         }
+        [HttpPost("addRecordOneUser")]
+        public async Task<TbTrUserCountryLaw> addRecordOneUser([FromForm] string id)
+        {
+            var result = await _accountRepository.addRecordOneUser(id);
+
+            return result;
+
+        }
 
         // GET api/<UserRankingApiController>/5
         [HttpGet("{id}")]

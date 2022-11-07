@@ -292,6 +292,7 @@ F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razo
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\UserQestionAnswers\Index.cshtml.g.cs
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Account\Privacy.cshtml.g.cs
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Create.cshtml.g.cs
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Form.cshtml.g.cs
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Index.cshtml.g.cs
@@ -299,7 +300,6 @@ F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razo
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Home\IndexCountries.cshtml.g.cs
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Home\LawPages.cshtml.g.cs
-F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -315,3 +315,14 @@ F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Mobi
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\MobileAppDashBoard.dll
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\MobileAppDashBoard.pdb
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\MobileAppDashBoard.genruntimeconfig.cache
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacyy.cshtml.g.cs
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Views\Account2\Login.cshtml.g.cs
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\bin\Debug\netcoreapp3.1\Google.Apis.dll
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\bin\Debug\netcoreapp3.1\Google.Apis.Auth.PlatformServices.dll
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\bin\Debug\netcoreapp3.1\Google.Apis.Auth.dll
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\bin\Debug\netcoreapp3.1\Google.Apis.Core.dll
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\LawLevelOne\Form.cshtml.g.cs
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\LawLevelOne\Index.cshtml.g.cs
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\LawLevelTwo\Form.cshtml.g.cs
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\LawLevelTwo\Index.cshtml.g.cs
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\LawLevelTwo\Form2.cshtml.g.cs

@@ -57,13 +57,13 @@ namespace MobileAppDashBoard.Controllers
             return View(model);
         }
 
-        
 
-        public IActionResult Privacy()
+        [Authorize]
+        public IActionResult Privacyy()
         {
             return View();
         }
-      
+
         public IActionResult About()
         {
             return View();
@@ -99,12 +99,23 @@ namespace MobileAppDashBoard.Controllers
 
 
 
-            return Json(claims);
+            return RedirectToAction("Privacy", "account");
         }
-        [Authorize]
-        public async Task<IActionResult> gLogout()
+       
+        public async Task<IActionResult> gLogoutt()
         {
-            await HttpContext.SignOutAsync();
+            if (HttpContext.Request.Cookies.Count > 0)
+            {
+                var siteCookies = HttpContext.Request.Cookies.Where(c => c.Key.Contains(".AspNetCore.") || c.Key.Contains("Microsoft.Authentication"));
+                foreach (var cookie in siteCookies)
+                {
+                    Response.Cookies.Delete(cookie.Key);
+                }
+            }
+
+            await HttpContext.SignOutAsync(
+CookieAuthenticationDefaults.AuthenticationScheme);
+            HttpContext.Session.Clear();
             return RedirectToAction("Index");
         }
     }

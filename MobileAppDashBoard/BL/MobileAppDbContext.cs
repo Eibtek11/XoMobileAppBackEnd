@@ -134,6 +134,15 @@ namespace BL
 
 
         public virtual DbSet<CalculateUserGrade> CalculateUserGrades { get; set; }
+
+        public virtual DbSet<TbLawLevelOne> TbLawLevelOnes { get; set; }
+
+
+        public virtual DbSet<TbLawLevelTwo> TbLawLevelTwos { get; set; }
+
+        
+
+
         //        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //        {
         //            if (!optionsBuilder.IsConfigured)
@@ -145,6 +154,7 @@ namespace BL
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<TbQuestionsMCQLast>()
        .Property(b => b._Tags).HasColumnName("Tags");
 
@@ -161,7 +171,7 @@ namespace BL
 
             modelBuilder.Entity<Blog>()
                 .Property(b => b._Owner).HasColumnName("Owner");
-            base.OnModelCreating(modelBuilder);
+            
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
 
 
@@ -379,6 +389,67 @@ namespace BL
                     .WithMany(p => p.TbLaws)
                     .HasForeignKey(d => d.CountryId)
                     .HasConstraintName("FK_TbLaw_TbCountry");
+            });
+
+
+            modelBuilder.Entity<TbLawLevelOne>(entity =>
+            {
+                entity.HasKey(e => e.LawLevelOneId);
+
+                entity.ToTable("TbLawLevelOne");
+
+                entity.Property(e => e.LawLevelOneId).ValueGeneratedNever();
+
+                entity.Property(e => e.CreatedBy).HasMaxLength(200);
+
+                entity.Property(e => e.CreatedDate).HasColumnType("datetime");
+
+                entity.Property(e => e.LawLevelOneDescription).HasMaxLength(200);
+
+                entity.Property(e => e.LawLevelOneName).HasMaxLength(200);
+
+                entity.Property(e => e.LawLevelOnePdf).HasMaxLength(200);
+
+                entity.Property(e => e.Notes).HasMaxLength(200);
+
+                entity.Property(e => e.UpdatedBy).HasMaxLength(200);
+
+                entity.Property(e => e.UpdatedDate).HasColumnType("datetime");
+
+                entity.HasOne(d => d.law)
+                    .WithMany(p => p.TbLawLevelOnes)
+                    .HasForeignKey(d => d.LawId)
+                    .HasConstraintName("FK_TbLawLevelOne_TbLaw");
+            });
+            
+            modelBuilder.Entity<TbLawLevelTwo>(entity =>
+            {
+                entity.HasKey(e => e.LawLevelTwoId);
+
+                entity.ToTable("TbLawLevelTwo");
+
+                entity.Property(e => e.LawLevelTwoId).ValueGeneratedNever();
+
+                entity.Property(e => e.CreatedBy).HasMaxLength(200);
+
+                entity.Property(e => e.CreatedDate).HasColumnType("datetime");
+
+                entity.Property(e => e.LawLevelTwoDescription).HasMaxLength(200);
+
+                entity.Property(e => e.LawLevelTwoName).HasMaxLength(200);
+
+                entity.Property(e => e.LawLevelTwoPdf).HasMaxLength(200);
+
+                entity.Property(e => e.Notes).HasMaxLength(200);
+
+                entity.Property(e => e.UpdatedBy).HasMaxLength(200);
+
+                entity.Property(e => e.UpdatedDate).HasColumnType("datetime");
+
+                entity.HasOne(d => d.lawOne)
+                    .WithMany(p => p.TbLawLevelTwos)
+                    .HasForeignKey(d => d.LawLevelOneId)
+                    .HasConstraintName("FK_TbLawLevelTwo_TbLawLevelOne");
             });
 
             modelBuilder.Entity<TbLevel>(entity =>

@@ -1,0 +1,789 @@
+{
+	"info": {
+		"_postman_id": "e5436eb3-7e91-44a2-b82a-900aaf5f79c1",
+		"name": "LastLawcityApi2ndVersion BookCommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13191479"
+	},
+	"item": [
+		{
+			"name": "Countries",
+			"item": [
+				{
+					"name": "Bring Data of Countries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookecommerce.com/api/CountryApi",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"CountryApi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bring Data of One Country With its Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookecommerce.com/api/CountOneApi/86fa2b75-d986-495f-b6b4-8fc3b231a77c",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"CountOneApi",
+								"86fa2b75-d986-495f-b6b4-8fc3b231a77c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Laws",
+			"item": [
+				{
+					"name": "Bring Data by LawID of The Laws and its Levels",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "17111e24-b15f-4f00-b943-b3e11edcb9bc",
+									"type": "text"
+								},
+								{
+									"key": "LevelId",
+									"value": "7d4bdb35-1cfa-43bd-ba5b-8a0180c0a6ee",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://bookecommerce.com/api/LawsAndItsLevelsApi/Check",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"LawsAndItsLevelsApi",
+								"Check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bring Data Of Laws with Detalis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookecommerce.com/api/LawsDetalisApi/",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"LawsDetalisApi",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bring Laws By CountryId Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookecommerce.com/api/LawsApi/f8175899-2f59-46ec-80ef-07983df1b694",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"LawsApi",
+								"f8175899-2f59-46ec-80ef-07983df1b694"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bring Data of The Laws Level One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookecommerce.com/api/LawLevelOneApi/7d4bdb35-1cfa-43bd-ba5b-8a0180c0a6ee",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"LawLevelOneApi",
+								"7d4bdb35-1cfa-43bd-ba5b-8a0180c0a6ee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bring Data of The Laws Level Two",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookecommerce.com/api/LawLevelTwoApi/532ad116-36d0-4850-ba89-c955b6a33a52",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"LawLevelTwoApi",
+								"532ad116-36d0-4850-ba89-c955b6a33a52"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Google",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Provider",
+									"value": "google",
+									"type": "text"
+								},
+								{
+									"key": "IdToken",
+									"value": "100105998700458145885",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://bookecommerce.com/api/GoogleAPI/ExternalLogin",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"GoogleAPI",
+								"ExternalLogin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Api",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"Email\" : \"ahmedmostafa706@gmail.com\",\r\n    \"Password\" : \"2812008a1A#\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://bookecommerce.com/api/UserLoginApi/login",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"UserLoginApi",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Api",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "PersonalImage",
+									"type": "file",
+									"src": "/F:/New folder/images/4.PNG"
+								},
+								{
+									"key": "firstname",
+									"value": "taema",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "attia",
+									"type": "text"
+								},
+								{
+									"key": "Email",
+									"value": "taema@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "Password",
+									"value": "2812008a1A@",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://bookecommerce.com/api/UserLoginApi/signup",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"UserLoginApi",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit User Api",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstname",
+									"value": "maemon",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "maemon",
+									"type": "text"
+								},
+								{
+									"key": "Email",
+									"value": "ahmedmostafa706@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "Password",
+									"value": "2812008a1A@",
+									"type": "text"
+								},
+								{
+									"key": "Id",
+									"value": "17111e24-b15f-4f00-b943-b3e11edcb9bc",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://bookecommerce.com/api/UserLoginApi/edit",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"UserLoginApi",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit User Image Api",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "PersonalImage",
+									"type": "file",
+									"src": "/C:/Users/USER/Desktop/images/3.PNG"
+								},
+								{
+									"key": "Id",
+									"value": "17111e24-b15f-4f00-b943-b3e11edcb9bc",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://bookecommerce.com/api/ImageUserChangeApi",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"ImageUserChangeApi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password Api",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Email",
+									"value": "ahmedmostafa706@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://bookecommerce.com/api/UserLoginApi/forget",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"UserLoginApi",
+								"forget"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bring Data Of All Users with Detalis Copy 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookecommerce.com/api/UserApi/",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"UserApi",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bring Data of One User With Its Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookecommerce.com/api/UserDetailsApi/ecef84a5-30b8-4ad9-b765-c791ebdd153b",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"UserDetailsApi",
+								"ecef84a5-30b8-4ad9-b765-c791ebdd153b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Questions",
+			"item": [
+				{
+					"name": "User Qestion Answers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": \"17111e24-b15f-4f00-b943-b3e11edcb9bc\",\r\n    \"QuestionId\":\"30afc114-a1ef-461a-aece-c5bcf39c5ebd\",\r\n    \"UserAnswer\":\"صحيح\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://bookecommerce.com/api/UserQestionAnswersApi/addAnswer",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"UserQestionAnswersApi",
+								"addAnswer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bring LevelQuestions as Recomended Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "17111e24-b15f-4f00-b943-b3e11edcb9bc",
+									"type": "text"
+								},
+								{
+									"key": "LevelId",
+									"value": "9e7bb9d0-7f8e-4f23-8bdf-ce6124f0b164",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://bookecommerce.com/api/Values/levelComplete",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"Values",
+								"levelComplete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ranking",
+			"item": [
+				{
+					"name": "User Ranking All Users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "17111e24-b15f-4f00-b943-b3e11edcb9bc",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://bookecommerce.com/api/UserRankingApi/addRecord",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"UserRankingApi",
+								"addRecord"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Ranking One User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "17111e24-b15f-4f00-b943-b3e11edcb9bc",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://bookecommerce.com/api/UserRankingApi/addRecordOneUser",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"UserRankingApi",
+								"addRecordOneUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Grades",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": \"17111e24-b15f-4f00-b943-b3e11edcb9bc\",\r\n    \"QuestionId\":\"01e493ba-4f3c-46dc-a90a-283eea3ee59c\",\r\n    \"UserAnswer\":\"صحيح\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://bookecommerce.com/api/UserQestionAnswersApi/17111e24-b15f-4f00-b943-b3e11edcb9bc",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"UserQestionAnswersApi",
+								"17111e24-b15f-4f00-b943-b3e11edcb9bc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Grades With Id Required",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Id",
+									"value": "17111e24-b15f-4f00-b943-b3e11edcb9bc",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://bookecommerce.com/api/UserQestionAnswersApi/getGrade",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"UserQestionAnswersApi",
+								"getGrade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Ranking",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": \"17111e24-b15f-4f00-b943-b3e11edcb9bc\",\r\n    \"QuestionId\":\"01e493ba-4f3c-46dc-a90a-283eea3ee59c\",\r\n    \"UserAnswer\":\"صحيح\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://bookecommerce.com/api/UserRankingApi",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"UserRankingApi"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Bring User Tasks Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookecommerce.com/api/TasksApi/17111e24-b15f-4f00-b943-b3e11edcb9bc",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"TasksApi",
+								"17111e24-b15f-4f00-b943-b3e11edcb9bc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bring User Count Of Tasks Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookecommerce.com/api/TasksNumberApi/17111e24-b15f-4f00-b943-b3e11edcb9bc",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"TasksNumberApi",
+								"17111e24-b15f-4f00-b943-b3e11edcb9bc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Claims",
+			"item": [
+				{
+					"name": "Bring Data Of Claims with Detalis Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookecommerce.com/api/ClaimsApi/",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"ClaimsApi",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
