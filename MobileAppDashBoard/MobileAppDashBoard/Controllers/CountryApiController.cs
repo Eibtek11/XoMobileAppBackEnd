@@ -26,7 +26,7 @@ namespace MobileAppDashBoard.Controllers
         }
         // GET: api/<CountryApiController>
         [HttpGet]
-        [Authorize]
+        
         public IEnumerable<TbCountry> Get()
         {
             var user = this.User;

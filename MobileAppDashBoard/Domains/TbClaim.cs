@@ -7,6 +7,11 @@ namespace Domains
 {
     public partial class TbClaim
     {
+        public TbClaim()
+        {
+
+            TbClaimLeveOnes = new HashSet<TbClaimLeveOne>();
+        }
         public Guid ClaimId { get; set; }
         public string ClaimSyntax { get; set; }
         public Guid? CountryId { get; set; }
@@ -17,7 +22,7 @@ namespace Domains
         public string ClainImage { get; set; }
         public string ClaimPdf { get; set; }
         public string Notes { get; set; }
-
         public virtual TbCountry Country { get; set; }
+        public virtual ICollection<TbClaimLeveOne> TbClaimLeveOnes { get; set; }
     }
 }

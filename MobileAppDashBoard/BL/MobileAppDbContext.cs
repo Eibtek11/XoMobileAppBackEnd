@@ -140,7 +140,12 @@ namespace BL
 
         public virtual DbSet<TbLawLevelTwo> TbLawLevelTwos { get; set; }
 
-        
+        public virtual DbSet<TbClaimLeveOne> TbClaimLeveOnes { get; set; }
+
+
+        public virtual DbSet<TbClaimLevelTwo> TbClaimLevelTwos { get; set; }
+
+
 
 
         //        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -202,6 +207,77 @@ namespace BL
                     .WithMany(p => p.TbClaims)
                     .HasForeignKey(d => d.CountryId)
                     .HasConstraintName("FK_TbClaims_TbCountry");
+            });
+
+
+
+            modelBuilder.Entity<TbClaimLeveOne>(entity =>
+            {
+                entity.HasKey(e => e.ClaimLeveOneId);
+
+                entity.Property(e => e.ClaimLeveOneId).ValueGeneratedNever();
+
+                entity.Property(e => e.ClaimId).HasMaxLength(200);
+
+                entity.Property(e => e.ClaimLeveOneSyntax).HasMaxLength(200);
+
+                entity.Property(e => e.ClaimLevelOneDescription).HasMaxLength(200);
+
+                entity.Property(e => e.ClainLeveOneImage).HasMaxLength(200);
+
+                entity.Property(e => e.ClaimLeveOnePdf).HasMaxLength(200);
+
+                entity.Property(e => e.CreatedBy).HasMaxLength(200);
+
+                entity.Property(e => e.CreatedDate).HasColumnType("datetime");
+
+                entity.Property(e => e.Notes).HasMaxLength(200);
+
+                entity.Property(e => e.UpdatedBy).HasMaxLength(200);
+
+                entity.Property(e => e.UpdatedDate).HasColumnType("datetime");
+
+                entity.HasOne(d => d.claim)
+                    .WithMany(p => p.TbClaimLeveOnes)
+                    .HasForeignKey(d => d.ClaimId)
+                    .HasConstraintName("FK_TbClaimLeveOnes_TbClaims");
+            });
+
+
+
+
+
+
+            modelBuilder.Entity<TbClaimLevelTwo>(entity =>
+            {
+                entity.HasKey(e => e.ClaimLevelTwoId);
+
+                entity.Property(e => e.ClaimLevelTwoId).ValueGeneratedNever();
+
+                entity.Property(e => e.ClaimLeveOneId).HasMaxLength(200);
+
+                entity.Property(e => e.ClaimLevelTwoSyntax).HasMaxLength(200);
+
+                entity.Property(e => e.ClaimLevelTwoSyntax).HasMaxLength(200);
+
+                entity.Property(e => e.ClainLevelTwoImage).HasMaxLength(200);
+
+                entity.Property(e => e.ClaimLevelTwoPdf).HasMaxLength(200);
+
+                entity.Property(e => e.CreatedBy).HasMaxLength(200);
+
+                entity.Property(e => e.CreatedDate).HasColumnType("datetime");
+
+                entity.Property(e => e.Notes).HasMaxLength(200);
+
+                entity.Property(e => e.UpdatedBy).HasMaxLength(200);
+
+                entity.Property(e => e.UpdatedDate).HasColumnType("datetime");
+
+                entity.HasOne(d => d.claimOne)
+                    .WithMany(p => p.TbClaimLevelTwos)
+                    .HasForeignKey(d => d.ClaimLeveOneId)
+                    .HasConstraintName("FK_TbClaimLevelTwos_TbClaimLeveOnes");
             });
 
             modelBuilder.Entity<TbComment>(entity =>

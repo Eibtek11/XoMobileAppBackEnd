@@ -73,6 +73,12 @@ namespace MobileAppDashBoard.Models
 
         public IEnumerable<TbLawLevelTwo> lstLawLevelTwoS { get; set; }
 
+
+        public IEnumerable<TbClaimLeveOne> TbClaimLeveOnes { get; set; }
+
+
+        public IEnumerable<TbClaimLevelTwo> TbClaimLevelTwos { get; set; }
+
         #endregion
 
     }

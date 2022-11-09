@@ -252,6 +252,111 @@ namespace BL.Migrations
                     b.ToTable("TbClaims");
                 });
 
+            modelBuilder.Entity("Domains.TbClaimLeveOne", b =>
+                {
+                    b.Property<Guid>("ClaimLeveOneId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ClaimId")
+                        .HasMaxLength(200)
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ClaimLeveOnePdf")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("ClaimLeveOneSyntax")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("ClaimLevelOneDescription")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("ClainLeveOneImage")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<Guid?>("CountryId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime");
+
+                    b.Property<string>("Notes")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime");
+
+                    b.HasKey("ClaimLeveOneId");
+
+                    b.HasIndex("ClaimId");
+
+                    b.ToTable("TbClaimLeveOnes");
+                });
+
+            modelBuilder.Entity("Domains.TbClaimLevelTwo", b =>
+                {
+                    b.Property<Guid>("ClaimLevelTwoId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ClaimLeveOneId")
+                        .HasMaxLength(200)
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ClaimLevelTwoDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimLevelTwoPdf")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("ClaimLevelTwoSyntax")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("ClainLevelTwoImage")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<Guid?>("CountryId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime");
+
+                    b.Property<string>("Notes")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime");
+
+                    b.HasKey("ClaimLevelTwoId");
+
+                    b.HasIndex("ClaimLeveOneId");
+
+                    b.ToTable("TbClaimLevelTwos");
+                });
+
             modelBuilder.Entity("Domains.TbComment", b =>
                 {
                     b.Property<Guid>("CommentId")
@@ -1159,6 +1264,30 @@ namespace BL.Migrations
                     b.Navigation("Country");
                 });
 
+            modelBuilder.Entity("Domains.TbClaimLeveOne", b =>
+                {
+                    b.HasOne("Domains.TbClaim", "claim")
+                        .WithMany("TbClaimLeveOnes")
+                        .HasForeignKey("ClaimId")
+                        .HasConstraintName("FK_TbClaimLeveOnes_TbClaims")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("claim");
+                });
+
+            modelBuilder.Entity("Domains.TbClaimLevelTwo", b =>
+                {
+                    b.HasOne("Domains.TbClaimLeveOne", "claimOne")
+                        .WithMany("TbClaimLevelTwos")
+                        .HasForeignKey("ClaimLeveOneId")
+                        .HasConstraintName("FK_TbClaimLevelTwos_TbClaimLeveOnes")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("claimOne");
+                });
+
             modelBuilder.Entity("Domains.TbLaw", b =>
                 {
                     b.HasOne("Domains.TbCountry", "Country")
@@ -1313,6 +1442,16 @@ namespace BL.Migrations
             modelBuilder.Entity("BL.Blog", b =>
                 {
                     b.Navigation("Posts");
+                });
+
+            modelBuilder.Entity("Domains.TbClaim", b =>
+                {
+                    b.Navigation("TbClaimLeveOnes");
+                });
+
+            modelBuilder.Entity("Domains.TbClaimLeveOne", b =>
+                {
+                    b.Navigation("TbClaimLevelTwos");
                 });
 
             modelBuilder.Entity("Domains.TbComment", b =>

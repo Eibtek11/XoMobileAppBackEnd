@@ -782,6 +782,48 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Bring Data of The Claims Level One Copy 3",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookecommerce.com/api/ClaimLevelOneApi/29421191-1952-4d29-81ae-4d5bc873d759",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"ClaimLevelOneApi",
+								"29421191-1952-4d29-81ae-4d5bc873d759"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bring Data of The Claim Level Two Copy 3",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookecommerce.com/api/ClaimLevelTwoApi/c232d5be-4fbb-4319-b119-4415e1300a78",
+							"protocol": "https",
+							"host": [
+								"bookecommerce",
+								"com"
+							],
+							"path": [
+								"api",
+								"ClaimLevelTwoApi",
+								"c232d5be-4fbb-4319-b119-4415e1300a78"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}

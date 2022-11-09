@@ -82,6 +82,8 @@ namespace MobileAppDashBoard
             services.AddScoped<CommentsService, ClsComments>();
             services.AddScoped<LawLevelOneService, ClsLawsLevelOne>();
             services.AddScoped<LawLevelTwoService, ClsLawsLevelTwo>();
+            services.AddScoped<ClaimLevelOneService, ClsClaimLevelOne>();
+            services.AddScoped<ClaimLevelTwoService, ClsClaimLevelTwo>();
             services.AddCors(options =>
             {
                 options.AddPolicy(MyAllowSpecificOrigins,

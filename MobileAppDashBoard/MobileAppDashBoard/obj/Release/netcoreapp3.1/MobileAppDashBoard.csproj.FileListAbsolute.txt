@@ -326,3 +326,8 @@ F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Ra
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\LawLevelTwo\Form.cshtml.g.cs
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\LawLevelTwo\Form2.cshtml.g.cs
 F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\LawLevelTwo\Index.cshtml.g.cs
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\ClaimLevelOne\Form.cshtml.g.cs
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\ClaimLevelOne\Index.cshtml.g.cs
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\ClaimLevelTwo\Form.cshtml.g.cs
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\ClaimLevelTwo\Form2.cshtml.g.cs
+F:\New folder\MobileAppDashBoard\MobileAppDashBoard\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\ClaimLevelTwo\Index.cshtml.g.cs
